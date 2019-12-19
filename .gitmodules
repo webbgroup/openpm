@@ -7,3 +7,6 @@
 [submodule "assets/owl-carousel"]
 	path = assets/owl-carousel
 	url = https://github.com/OwlCarousel2/OwlCarousel2.git
+[submodule "assets/jquery"]
+	path = assets/jquery
+	url = git://github.com/jquery/jquery.git

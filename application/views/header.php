@@ -22,10 +22,10 @@
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="<?php echo base_url();?>assets/style.css"/>
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.js"></script>
+  <script src="<?php echo base_url();?>assets/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/bootstrap/dist/js/bootstrap.js"></script>
   <script src="<?php echo base_url();?>assets/script.js"></script>
 
 
