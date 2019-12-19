@@ -31,9 +31,9 @@
 
 
 <!-- Owl stylesheet -->
-<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/owl.theme.css">
-<script src="<?php echo base_url();?>assets/owl-carousel/owl.carousel.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/dist/owl.carousel.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/dist/owl.theme.css">
+<script src="<?php echo base_url();?>assets/owl-carousel/dist/owl.carousel.js"></script>
 <!-- Owl stylesheet -->
 
 
