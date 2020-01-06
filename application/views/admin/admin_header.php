@@ -11,15 +11,15 @@
 
 		<!-- basic styles -->
 
-		<link href="<?php echo base_url();?>assets1/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/font-awesome.min.css" />
+		<link href="<?php echo base_url(); ?>assets1/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
-		  <link rel="stylesheet" href="<?php echo base_url();?>assets1/css/font-awesome-ie7.min.css" />
+		  <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/font-awesome-ie7.min.css" />
 		<![endif]-->
 
 		<!-- page specific plugin styles -->
-		<!-- <link rel="stylesheet" href="<?php echo base_url();?>assets1/css/dropzone.css" /> -->
+		<!-- <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/dropzone.css" /> -->
 
 		<!-- fonts -->
 
@@ -27,26 +27,26 @@
 
 		<!-- ace styles -->
 
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace.min.css" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/colorpicker.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/colorpicker.css" />
 
 		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-extra.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-extra.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
 		<!--[if lt IE 9]>
-		<script src="<?php echo base_url();?>assets1/js/html5shiv.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/respond.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/html5shiv.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -71,7 +71,7 @@
 						
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php echo base_url();?>assets1/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="<?php echo base_url(); ?>assets1/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									<?php echo $this->session->userdata('username'); ?>
@@ -83,7 +83,7 @@
 							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="<?php echo base_url();?>admin/logout">
+									<a href="<?php echo base_url(); ?>admin/logout">
 										<i class="icon-off"></i>
 										Logout
 									</a>

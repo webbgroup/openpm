@@ -18,63 +18,65 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */ ?>
 <head>
-<title><?php if($site_title){echo $site_title['contents']->cvalue;}?></title>
+<title><?php if ($site_title) {
+    echo $site_title['contents']->cvalue;
+}?></title>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/style.css"/>
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/style.css"/>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.js"></script>
-  <script src="<?php echo base_url();?>assets/script.js"></script>
+  <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.js"></script>
+  <script src="<?php echo base_url(); ?>assets/script.js"></script>
 
 
 
 <!-- Owl stylesheet -->
-<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="<?php echo base_url();?>assets/owl-carousel/owl.theme.css">
-<script src="<?php echo base_url();?>assets/owl-carousel/owl.carousel.js"></script>
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.theme.css">
+<script src="<?php echo base_url(); ?>assets/owl-carousel/owl.carousel.js"></script>
 <!-- Owl stylesheet -->
 
 
 <!-- slitslider -->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slitslider/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slitslider/css/custom.css" />
-    <script type="text/javascript" src="<?php echo base_url();?>assets/slitslider/js/modernizr.custom.79639.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/slitslider/js/jquery.ba-cond.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/slitslider/js/jquery.slitslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slitslider/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slitslider/css/custom.css" />
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/slitslider/js/modernizr.custom.79639.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/slitslider/js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/slitslider/js/jquery.slitslider.js"></script>
 <!-- slitslider -->
-<?php if($hycolor){
- $h_color=$hycolor['contents']['cvalue'];
+<?php if ($hycolor) {
+    $h_color = $hycolor['contents']['cvalue'];
 }
-if($btncolors){
-  $btn=$btncolors['contents']['cvalue'];
+if ($btncolors) {
+    $btn = $btncolors['contents']['cvalue'];
 }
-if($style){
-  $color= $style['contents']->cvalue;
+if ($style) {
+    $color = $style['contents']->cvalue;
 }
-if($bannercolor){
-  $banner= $bannercolor['contents']['cvalue'];
+if ($bannercolor) {
+    $banner = $bannercolor['contents']['cvalue'];
 }
 ?>
-<!-- <link rel="stylesheet" href="<?php echo base_url();?>assets/test.php"> -->
+<!-- <link rel="stylesheet" href="<?php echo base_url(); ?>assets/test.php"> -->
 
 
 <style type="text/css">
   a{
-    color :<?php echo $h_color;?>;
+    color :<?php echo $h_color; ?>;
   }
   .btn-primary{
-      background :<?php echo $btn;?> none repeat scroll 0 0;
+      background :<?php echo $btn; ?> none repeat scroll 0 0;
   }
   .btn-success , .sl-slider blockquote cite{
-     background :<?php echo $btn;?> none repeat scroll 0 0;
+     background :<?php echo $btn; ?> none repeat scroll 0 0;
   }
   #nav_wrap{
-    background-color :<?php echo $color;?>;
+    background-color :<?php echo $color; ?>;
   }
   .banner-search , .inside-banner{
-    background : <?php echo $banner;?>;
+    background : <?php echo $banner; ?>;
   }
 
 </style>
@@ -112,10 +114,10 @@ $(document).ready(function(){
             <div class="navbar-collapse  collapse">
             <div id="smoothmenu1" class="ddsmoothmenu">
               <ul class="nav navbar-nav navbar-right">
-               <li class="<?=($this->uri->segment(2)==='index')?'active':''?>"><a href="<?php echo base_url();?>">Home</a></li>
-                <li class="<?=($this->uri->segment(2)==='about')?'active':''?>"><a href="<?php echo base_url('home/about');?>">About</a></li>
-                <li class="<?=($this->uri->segment(2)==='agents')?'active':''?>"><a href="<?php echo base_url('home/agents');?>">Agents</a></li>         
-                <li class="<?=($this->uri->segment(2)==='contact')?'active':''?>"><a href="<?php echo base_url('home/contact');?>">Contact</a></li>
+               <li class="<?php echo ('index' === $this->uri->segment(2)) ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>">Home</a></li>
+                <li class="<?php echo ('about' === $this->uri->segment(2)) ? 'active' : ''; ?>"><a href="<?php echo base_url('home/about'); ?>">About</a></li>
+                <li class="<?php echo ('agents' === $this->uri->segment(2)) ? 'active' : ''; ?>"><a href="<?php echo base_url('home/agents'); ?>">Agents</a></li>         
+                <li class="<?php echo ('contact' === $this->uri->segment(2)) ? 'active' : ''; ?>"><a href="<?php echo base_url('home/contact'); ?>">Contact</a></li>
               </ul>
               </div>
             </div>
@@ -134,20 +136,21 @@ $(document).ready(function(){
 
 <!-- Header Starts -->
 <div class="header">
-<?php if($site_logo){
-  ?>
-<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url();?>uploads/<?php echo $site_logo['contents']->cvalue;?>" alt="Realestate"></a>
+<?php if ($site_logo) {
+    ?>
+<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>uploads/<?php echo $site_logo['contents']->cvalue; ?>" alt="Realestate"></a>
 
- <?php }?>
+ <?php
+}?>
 
               
                
 
             
               <ul class="pull-right">
-               <!--  <li><a href="<?php echo base_url();?>index.php/home/buysAleRent">Buy</a></li> -->
-                <li><a href="<?php echo base_url();?>home/forSale">Sale</a></li>         
-                <li><a href="<?php echo base_url();?>home/forRent">Rent</a></li>
+               <!--  <li><a href="<?php echo base_url(); ?>index.php/home/buysAleRent">Buy</a></li> -->
+                <li><a href="<?php echo base_url(); ?>home/forSale">Sale</a></li>         
+                <li><a href="<?php echo base_url(); ?>home/forRent">Rent</a></li>
               </ul>
 </div>
 <!-- #Header Starts -->

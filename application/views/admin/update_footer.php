@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/admin_header');?>
+<?php $this->load->view('admin/admin_header'); ?>
 <?php $this->load->view('admin/admin_sidebar'); ?>
 		<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
@@ -36,12 +36,11 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-								<form id="addpage2" action="<?php echo base_url();?>admin/updateFooterPageContent" method="post" enctype="multipart/form-data">
+								<form id="addpage2" action="<?php echo base_url(); ?>admin/updateFooterPageContent" method="post" enctype="multipart/form-data">
 								<div class="row">
-								<?php if($contents){
-										foreach ($contents as $cnt) {
-											
-										}?>
+								<?php if ($contents) {
+    foreach ($contents as $cnt) {
+    } ?>
 								<h4 class="header green clearfix">
 									Contents
 									<span class="block pull-right">
@@ -68,13 +67,13 @@
 									</span>
 								</h4>
 
-								<div class="wysiwyg-editor"  id="editor1"><?php echo $cnt->content;?></div>
+								<div class="wysiwyg-editor"  id="editor1"><?php echo $cnt->content; ?></div>
 								<div class="space-4"></div>
 								<div class="row">
 														<div class="form-group">																						
 														<label class="col-sm-3 control-label no-padding-right"> Title</label>
 														<div class="col-xs-5 col-sm-4">
-																<input id="title" class="col-xs-10 col-sm-6" type="text" name="title" value="<?php echo $cnt->title;?>" required>	
+																<input id="title" class="col-xs-10 col-sm-6" type="text" name="title" value="<?php echo $cnt->title; ?>" required>	
 														</div>
 												
 												</div>
@@ -102,7 +101,8 @@
 										</div>
 										</div>
 									<div class="hr hr-double dotted"></div>
-									<?php }?>
+									<?php
+}?>
 								
 								<script type="text/javascript">
 									var $path_assets = "assets1";//this will be used in loading jQuery UI if needed!
@@ -183,7 +183,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1//js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1//js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -195,25 +195,25 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1//js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1//js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1//js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
-		<script src="<?php echo base_url();?>assets1//js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/jquery.ui.touch-punch.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/markdown/markdown.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/markdown/bootstrap-markdown.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/jquery.hotkeys.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/bootstrap-wysiwyg.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/jquery.ui.touch-punch.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/markdown/markdown.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/markdown/bootstrap-markdown.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/jquery.hotkeys.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/bootstrap-wysiwyg.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/bootbox.min.js"></script>
 
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1//js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1//js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1//js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 

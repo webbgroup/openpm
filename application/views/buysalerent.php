@@ -1,4 +1,4 @@
-<?php include'header.php';?>
+<?php include 'header.php'; ?>
 <?php /*
 
     Copyright (C) 2019 Joel Webb
@@ -19,7 +19,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container"> 
-    <span class="pull-right"><a href="<?php echo base_url();?>">Home</a> / Sale & Rent</span>
+    <span class="pull-right"><a href="<?php echo base_url(); ?>">Home</a> / Sale & Rent</span>
     <h2>Sale & Rent</h2>
 </div>
 </div>
@@ -166,29 +166,29 @@
 <div class="hot-properties hidden-xs">
 <h4>Hot Properties</h4>
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url();?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
+                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
                 <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
                   <p class="price">$300,000</p> </div>
               </div>
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url();?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
+                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
                 <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
-                  <p class="price">$300,000</p> </div>
-              </div>
-
-<div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url();?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
-                <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
                   <p class="price">$300,000</p> </div>
               </div>
 
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url();?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
+                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
                 <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
+                  <p class="price">$300,000</p> </div>
+              </div>
+
+<div class="row">
+                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
+                <div class="col-lg-8 col-sm-7">
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertyDetail">Integer sed porta quam</a></h5>
                   <p class="price">$300,000</p> </div>
               </div>
 
@@ -211,16 +211,18 @@
 <div class="row">
 
      <!-- properties -->
-      <?php foreach($residential as $res){?>
+      <?php foreach ($residential as $res) {?>
       <div class="col-lg-4 col-sm-6">
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url();?>uploads/<?php if($res['image_name']==''){?>no-image.png<?php }else{ echo $res['image_name'];}?>" class="img-responsive" alt="properties">
+        <div class="image-holder"><img src="<?php echo base_url(); ?>uploads/<?php if ('' == $res['image_name']) {?>no-image.png<?php } else {
+    echo $res['image_name'];
+}?>" class="img-responsive" alt="properties">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="<?php echo base_url();?>index.php/home/propertyDetail"><?php echo $res['title'];?></a></h4>
+        <h4><a href="<?php echo base_url(); ?>index.php/home/propertyDetail"><?php echo $res['title']; ?></a></h4>
         <p class="price">Price: $234,900</p>
-       <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <!-- <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> --> </div>
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertyDetail">View Details</a>
+       <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <!-- <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> --> </div>
+        <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertyDetail">View Details</a>
       </div>
       </div>
       <?php }?>
@@ -242,4 +244,4 @@
 </div>
 </div>
 
-<?php include'footer.php';?>
+<?php include 'footer.php'; ?>

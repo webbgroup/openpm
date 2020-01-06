@@ -1,4 +1,4 @@
-<?php $pageName = 'about';?>
+<?php $pageName = 'about'; ?>
 <?php /*
 
     Copyright (C) 2019 Joel Webb
@@ -29,15 +29,15 @@
 <div class="container">
 <div class="spacer">
 <div class="row">
-<?php if($page){
-  foreach($page as $pg){
-
-    }?>
+<?php if ($page) {
+    foreach ($page as $pg) {
+    } ?>
   <div class="col-lg-8  col-lg-offset-2">
-  <img src="<?php echo base_url(); ?>uploads/<?php echo $pg['file_name'];?>" class="img-responsive thumbnail"  alt="realestate">
-  <h3><?php echo $pg['title'];?></h3>
-  <p><?php echo $pg['content'];?></p>
- <?php } ?>
+  <img src="<?php echo base_url(); ?>uploads/<?php echo $pg['file_name']; ?>" class="img-responsive thumbnail"  alt="realestate">
+  <h3><?php echo $pg['title']; ?></h3>
+  <p><?php echo $pg['content']; ?></p>
+ <?php
+} ?>
 </div>
 </div>
 </div>

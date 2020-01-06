@@ -11,8 +11,8 @@
 
 		<!-- basic styles -->
 
-		<link href="<?php echo base_url();?>assets1/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="="<?php echo base_url();?>assets1/css/font-awesome.min.css" />
+		<link href="<?php echo base_url(); ?>assets1/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="="<?php echo base_url(); ?>assets1/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
@@ -26,8 +26,8 @@
 
 		<!-- ace styles -->
 
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace.min.css" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets1/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets1/css/ace-rtl.min.css" />
 
 		<!--[if lte IE 8]>
 		  <link rel="stylesheet" href="assets1/css/ace-ie.min.css" />
@@ -70,10 +70,10 @@
 
 											<div class="space-6"></div>
 
-											<form name="admin_login_form" method="post" action="<?php echo base_url();?>admin/login">
+											<form name="admin_login_form" method="post" action="<?php echo base_url(); ?>admin/login">
 												<fieldset>
 												<?php if ($error) {
-	echo "<span class='error' style='color:red;'>" . $error . "</span>";
+    echo "<span class='error' style='color:red;'>".$error.'</span>';
 }
 ?>
 													<label class="block clearfix">
@@ -290,7 +290,7 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- inline scripts related to this page -->
@@ -302,7 +302,7 @@
 			}
 		</script>
 		<div class='footer' style='position:absolute; width:300px; height:300px; bottom:0px; right:25%; left:50%; margin-left:-150px;'>
-		<p class="copyright">Copyright &copy 2015-<?php echo date('Y');?>. <a href='http://www.propbot.org'>OpenPM</a> <a href="http://www.PropBot.com">PropBot.com</a> All rights reserved. </p>
+		<p class="copyright">Copyright &copy 2015-<?php echo date('Y'); ?>. <a href='http://www.propbot.org'>OpenPM</a> <a href="http://www.PropBot.com">PropBot.com</a> All rights reserved. </p>
 		</div>
 	</body>
 

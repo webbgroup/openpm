@@ -1,4 +1,4 @@
-<?php 
+<?php
 $this->load->view('admin/admin_header');
 $this->load->view('admin/admin_sidebar');
 ?>
@@ -113,29 +113,29 @@ $this->load->view('admin/admin_sidebar');
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 	</body>

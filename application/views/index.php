@@ -21,76 +21,76 @@
 
         <div class="sl-slider">
         <?php //echo "<pre>";print_r($slider);echo "</pre>";echo "<pre>";print_r($slider_com);echo "</pre>";
-$c = array_merge($slider, $slider_com);?>
+$c = array_merge($slider, $slider_com); ?>
         <?php if ($slider) {
-	foreach ($slider as $slide) {
-		?>
+    foreach ($slider as $slide) {
+        ?>
 
 <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
 <div class="sl-slide-inner">
-<div class="bg-img bg-img-1" style="background-image:url(<?php echo base_url();?>uploads/<?php $ab = explode(",", $slide['filename']);
-		echo $ab[0];?>);"></div>
+<div class="bg-img bg-img-1" style="background-image:url(<?php echo base_url(); ?>uploads/<?php $ab = explode(',', $slide['filename']);
+        echo $ab[0]; ?>);"></div>
 <h2>
-<?php if ($slide['forSale'] == 1) {?>
-<a href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $slide['resId'];?>"><?php echo $slide['title'];?>
+<?php if (1 == $slide['forSale']) {?>
+<a href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $slide['resId']; ?>"><?php echo $slide['title']; ?>
 </a>
 <?php } else {?>
-<a href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $slide['resId'];?>"><?php echo $slide['title'];?>
+<a href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $slide['resId']; ?>"><?php echo $slide['title']; ?>
 </a>
-<?php }
-		?>
+<?php } ?>
 </h2>
 <blockquote>
-<p class="location"><span class="glyphicon glyphicon-map-marker"></span><?php echo $slide['address'] . ", " . $slide['city'] . ", " . $slide['state'] . " ," . $slide['zip'];?></p
-<p><?php echo $slide['description'];?>.</p>
-<?php if ($slide['forSale'] == "1") {?>
-<a href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $slide['resId'];?>" style="color:white;"><cite>$ <?php echo number_format($slide['price']);?></cite></a>
+<p class="location"><span class="glyphicon glyphicon-map-marker"></span><?php echo $slide['address'].', '.$slide['city'].', '.$slide['state'].' ,'.$slide['zip']; ?></p
+<p><?php echo $slide['description']; ?>.</p>
+<?php if ('1' == $slide['forSale']) {?>
+<a href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $slide['resId']; ?>" style="color:white;"><cite>$ <?php echo number_format($slide['price']); ?></cite></a>
 <?php } else {?>
-<a href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $slide['resId'];?>" style="color:white;"><cite>$ <?php echo number_format($slide['rent']);?></cite></a>
-<?php }
-		?>
+<a href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $slide['resId']; ?>" style="color:white;"><cite>$ <?php echo number_format($slide['rent']); ?></cite></a>
+<?php } ?>
 </blockquote>
 </div>
 </div>
-<?php }}
+<?php
+    }
+}
 ?>
            <?php if ($slider_com) {
-	foreach ($slider_com as $slide) {
-		?>
+    foreach ($slider_com as $slide) {
+        ?>
 
           <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
             <div class="sl-slide-inner">
-              <div class="bg-img bg-img-1" style="background-image:url(<?php echo base_url();?>uploads/<?php $ab = explode(",", $slide['comfile']);
-		echo $ab[0];?>);"></div>
+              <div class="bg-img bg-img-1" style="background-image:url(<?php echo base_url(); ?>uploads/<?php $ab = explode(',', $slide['comfile']);
+        echo $ab[0]; ?>);"></div>
               <h2>
-              <?php if ($slide['fs'] == "1") {?>
-                <a href="<?php echo base_url();?>index.php/home/propertyComSaleDetail?id=<?php echo $slide['commId'];?>"><?php echo $slide['ti'];?>
+              <?php if ('1' == $slide['fs']) {?>
+                <a href="<?php echo base_url(); ?>index.php/home/propertyComSaleDetail?id=<?php echo $slide['commId']; ?>"><?php echo $slide['ti']; ?>
                 </a>
                 <?php } else {?>
-                <a href="<?php echo base_url();?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId'];?>"><?php echo $slide['ti'];?>
+                <a href="<?php echo base_url(); ?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId']; ?>"><?php echo $slide['ti']; ?>
                 </a>
-                <?php }
-		?>
+                <?php } ?>
               </h2>
               <blockquote>
-              <p class="location"><span class="glyphicon glyphicon-map-marker"></span><?php echo $slide['adr'] . ", " . $slide['ct'] . ", " . $slide['st'] . " ," . $slide['zp'];?></p
-              <p><?php echo $slide['descr'];?>.</p>
-              <?php if ($slide['fs'] == "1") {?>
-                   <a href="<?php echo base_url();?>index.php/home/propertyComSaleDetail?id=<?php echo $slide['commId'];?>" style="color:white;"><cite>$ <?php echo number_format($slide['pr']);?></cite></a>
+              <p class="location"><span class="glyphicon glyphicon-map-marker"></span><?php echo $slide['adr'].', '.$slide['ct'].', '.$slide['st'].' ,'.$slide['zp']; ?></p
+              <p><?php echo $slide['descr']; ?>.</p>
+              <?php if ('1' == $slide['fs']) {?>
+                   <a href="<?php echo base_url(); ?>index.php/home/propertyComSaleDetail?id=<?php echo $slide['commId']; ?>" style="color:white;"><cite>$ <?php echo number_format($slide['pr']); ?></cite></a>
               <?php } else {
-			if ($slide['rent'] == 0 && $slide['type'] == 0) {?>
-                  <a href="<?php echo base_url();?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId'];?>" style="color:white;"><cite>$ <?php echo number_format($slide['pr']);?></cite></a>
+            if (0 == $slide['rent'] && 0 == $slide['type']) {?>
+                  <a href="<?php echo base_url(); ?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId']; ?>" style="color:white;"><cite>$ <?php echo number_format($slide['pr']); ?></cite></a>
 
                     <?php } else {?>
-                    <a href="<?php echo base_url();?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId'];?>" style="color:white;"><cite>$ <?php echo number_format($slide['rent']);?>&nbsp; <?php echo $slide['type'];?></cite></a>
-                  <?php }
-			?>
-              <?php }
-		?>
+                    <a href="<?php echo base_url(); ?>index.php/home/propertyComRentDetail?id=<?php echo $slide['commId']; ?>" style="color:white;"><cite>$ <?php echo number_format($slide['rent']); ?>&nbsp; <?php echo $slide['type']; ?></cite></a>
+                  <?php } ?>
+              <?php
+        } ?>
               </blockquote>
             </div>
           </div>
-          <?php }}
+          <?php
+    }
+}
 ?>
         </div><!-- /sl-slider -->
 
@@ -100,10 +100,9 @@ $c = array_merge($slider, $slider_com);?>
         <?php
 $img_count = count($c);
 $c = 0;
-for ($c = 0; $c < $img_count; $c++) {
-	$class = ($c == 0) ? "nav-dot-current" : "";
-	echo '<span class="' . $class . '"></span>';
-
+for ($c = 0; $c < $img_count; ++$c) {
+    $class = (0 == $c) ? 'nav-dot-current' : '';
+    echo '<span class="'.$class.'"></span>';
 }
 ?>
          <!--  <span class="nav-dot-current"></span>
@@ -116,7 +115,7 @@ for ($c = 0; $c < $img_count; $c++) {
       </div><!-- /slider-wrapper -->
 </div>
 <div class="banner-search">
-<form id="prop_search" method="post" action="<?php echo base_url();?>home/searchProp">
+<form id="prop_search" method="post" action="<?php echo base_url(); ?>home/searchProp">
   <div class="container">
     <!-- banner -->
     <h3>Sale & Rent</h3>
@@ -159,52 +158,52 @@ for ($c = 0; $c < $img_count; $c++) {
 </div>
 <!-- banner -->
 <div class="container">
-  <div class="properties-listing spacer"> <a href="<?php echo base_url();?>index.php/home/forSale" class="pull-right viewall">View All Listing</a>
+  <div class="properties-listing spacer"> <a href="<?php echo base_url(); ?>index.php/home/forSale" class="pull-right viewall">View All Listing</a>
     <h2>Featured Properties</h2>
     <div id="owl-example" class="owl-carousel">
     <?php if ($residential) {
-	foreach ($residential as $res) {
-		?>
+    foreach ($residential as $res) {
+        ?>
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url();?>uploads/<?php $ab = explode(",", $res['filename']);
-		echo $ab[0];?>" class="img-responsive" alt="properties" style="height:166px;display:block;"/>
-          <div class="status sold"><?php echo $res['status'];?></div>
+        <div class="image-holder"><img src="<?php echo base_url(); ?>uploads/<?php $ab = explode(',', $res['filename']);
+        echo $ab[0]; ?>" class="img-responsive" alt="properties" style="height:166px;display:block;"/>
+          <div class="status sold"><?php echo $res['status']; ?></div>
         </div>
         <h4>
-         <?php if ($res['forSale'] == "1") {?>
-        <a href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $res['resId'];?>"><?php echo $res['title'];?></a>
+         <?php if ('1' == $res['forSale']) {?>
+        <a href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $res['resId']; ?>"><?php echo $res['title']; ?></a>
         <?php } else {?>
-         <a href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $res['resId'];?>"><?php echo $res['title'];?></a>
-        <?php }
-		?>
+         <a href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $res['resId']; ?>"><?php echo $res['title']; ?></a>
+        <?php } ?>
         </h4>
-        <p class="price">Price: $<?php echo number_format($res['price']);?></p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <!-- <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> --> </div>
-         <?php if ($res['forSale'] == "1") {?>
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $res['resId'];?>">View Details</a>
+        <p class="price">Price: $<?php echo number_format($res['price']); ?></p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <!-- <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> --> </div>
+         <?php if ('1' == $res['forSale']) {?>
+        <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $res['resId']; ?>">View Details</a>
         <?php } else {?>
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $res['resId'];?>">View Details</a>
-         <?php }
-		?>
+        <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $res['resId']; ?>">View Details</a>
+         <?php } ?>
       </div>
-      <?php }}
+      <?php
+    }
+}
 ?>
     </div>
   </div>
   <!-- <div class="spacer">
     <div class="row">
-   <div class="properties-listing spacer"> <a href="<?php echo base_url();?>index.php/home/buysAleRent" class="pull-right viewall">View All Listing</a>
+   <div class="properties-listing spacer"> <a href="<?php echo base_url(); ?>index.php/home/buysAleRent" class="pull-right viewall">View All Listing</a>
     <h2>Featured Properties</h2>
     <div id="owl-example" class="owl-carousel">
     <?php foreach ($residential as $res) {?>
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url();?>uploads/<?php echo $res['image_name'];?>" class="img-responsive" alt="properties"/>
-          <div class="status sold"><?php echo $res['status'];?></div>
+        <div class="image-holder"><img src="<?php echo base_url(); ?>uploads/<?php echo $res['image_name']; ?>" class="img-responsive" alt="properties"/>
+          <div class="status sold"><?php echo $res['status']; ?></div>
         </div>
-        <h4><a href="<?php echo base_url();?>index.php/home/propertyDetail"><?php echo $res['title'];?></a></h4>
-        <p class="price">Price: <?php echo number_format($res['price']);?></p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths'];?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertyDetail">View Details</a>
+        <h4><a href="<?php echo base_url(); ?>index.php/home/propertyDetail"><?php echo $res['title']; ?></a></h4>
+        <p class="price">Price: <?php echo number_format($res['price']); ?></p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertyDetail">View Details</a>
       </div>
       <?php }
 ?>
@@ -218,14 +217,14 @@ for ($c = 0; $c < $img_count; $c++) {
       <div class="col-lg-6 col-sm-9 recent-view">
         <h3>About Us</h3>
         <?php if ($aboutus) {
-	foreach ($aboutus as $about) {
-
-	}
-	$string = $about['content'];
-	$string = substr($string, 0, strpos($string, "</p>") + 4);
-	$string = str_replace("<p>", "", str_replace("</p>", "", $string));?>
-        <p><?php echo $string;?><a href="<?php echo base_url();?>home/about">Learn More</a></p>
-       <?php }
+    foreach ($aboutus as $about) {
+    }
+    $string = $about['content'];
+    $string = substr($string, 0, strpos($string, '</p>') + 4);
+    $string = str_replace('<p>', '', str_replace('</p>', '', $string)); ?>
+        <p><?php echo $string; ?><a href="<?php echo base_url(); ?>home/about">Learn More</a></p>
+       <?php
+}
 ?>
       </div>
       </div><!--added-->
@@ -242,31 +241,30 @@ for ($c = 0; $c < $img_count; $c++) {
           </ol>
           <!-- Carousel items -->
           <div class="carousel-inner">
-           <?php if ($recomended != "") {
-	$i = 1;
-	foreach ($recomended AS $rec) {
-
-		if ($i == 1) {
-			$class_ative = "active";
-		} else {
-			$class_ative = '';
-		}
-		?>
-            <div class="item <?php echo $class_ative;?>">
+           <?php if ('' != $recomended) {
+    $i = 1;
+    foreach ($recomended as $rec) {
+        if (1 == $i) {
+            $class_ative = 'active';
+        } else {
+            $class_ative = '';
+        } ?>
+            <div class="item <?php echo $class_ative; ?>">
               <div class="row">
-                <div class="col-lg-4"><img src="<?php echo base_url();?>uploads/<?php $ab = explode(",", $rec['filename']);
-		echo $ab[0];?>" class="img-responsive" alt="properties"/></div>
+                <div class="col-lg-4"><img src="<?php echo base_url(); ?>uploads/<?php $ab = explode(',', $rec['filename']);
+        echo $ab[0]; ?>" class="img-responsive" alt="properties"/></div>
                 <div class="col-lg-8">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $res['resId'];?>"><?php echo $rec['title'];?></a></h5>
-                  <p class="price">$<?php echo number_format($rec['price']);?></p>
-                  <a href="<?php echo base_url();?>index.php/home/propertySaleDetail?id=<?php echo $res['resId'];?>" class="more">More Detail</a> </div>
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $res['resId']; ?>"><?php echo $rec['title']; ?></a></h5>
+                  <p class="price">$<?php echo number_format($rec['price']); ?></p>
+                  <a href="<?php echo base_url(); ?>index.php/home/propertySaleDetail?id=<?php echo $res['resId']; ?>" class="more">More Detail</a> </div>
               </div>
             </div>
             <?php
-/*echo $i;*/
-		$i++;
-		?>
-             <?php }}
+// echo $i;
+        ++$i; ?>
+             <?php
+    }
+}
 ?>
           </div>
         </div>

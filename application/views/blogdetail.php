@@ -1,4 +1,4 @@
-<?php include'header.php';?>
+<?php include 'header.php'; ?>
 <?php /*
 
     Copyright (C) 2019 Joel Webb
@@ -19,7 +19,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container"> 
-    <span class="pull-right"><a href="<?php echo base_url();?>">Home</a> / Blogs</span>
+    <span class="pull-right"><a href="<?php echo base_url(); ?>">Home</a> / Blogs</span>
     <h2>Blogs</h2>
 </div>
 </div>

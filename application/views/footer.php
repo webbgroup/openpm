@@ -16,12 +16,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */ ?>
 <?php if ($style) {
-	foreach ($style as $color) {
-
-	}
-	?>
-<input type="hidden" value="<?php echo $color->cvalue;?>" id="footer_color" />
-<?php }
+    foreach ($style as $color) {
+    } ?>
+<input type="hidden" value="<?php echo $color->cvalue; ?>" id="footer_color" />
+<?php
+}
 ?>
 <script type="text/javascript">
       $(document).ready(function(){
@@ -39,10 +38,10 @@
             <div class="col-lg-3 col-sm-3">
                    <h4>Information</h4>
                    <ul class="row">
-                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url();?>index.php/home/about">About</a></li>
-                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url();?>home/agents">Agents</a></li>
-               <!--  <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url();?>home/blog">Blog</a></li> -->
-                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url();?>home/contact">Contact</a></li>
+                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url(); ?>index.php/home/about">About</a></li>
+                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url(); ?>home/agents">Agents</a></li>
+               <!--  <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url(); ?>home/blog">Blog</a></li> -->
+                <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url(); ?>home/contact">Contact</a></li>
               </ul>
             </div>
 
@@ -56,32 +55,31 @@
 
             <div class="col-lg-3 col-sm-3">
                     <h4>Follow us</h4>
-                    <a href="#"><img src="<?php echo base_url();?>images/facebook.png" alt="facebook"></a>
-                    <a href="#"><img src="<?php echo base_url();?>images/twitter.png" alt="twitter"></a>
-                    <a href="#"><img src="<?php echo base_url();?>images/linkedin.png" alt="linkedin"></a>
-                    <a href="#"><img src="<?php echo base_url();?>images/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>images/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>images/twitter.png" alt="twitter"></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>images/linkedin.png" alt="linkedin"></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>images/instagram.png" alt="instagram"></a>
             </div>
 
              <div class="col-lg-3 col-sm-3">
              <?php if ($address) {
-	foreach ($address as $adr) {
-
-	}
-	?>
+    foreach ($address as $adr) {
+    } ?>
                     <h4>Contact us</h4>
                     <p><b></b><br>
-<span class="glyphicon glyphicon-map-marker"></span> <?php echo $adr->content;?><br>
+<span class="glyphicon glyphicon-map-marker"></span> <?php echo $adr->content; ?><br>
 <!-- <span class="glyphicon glyphicon-envelope"></span> hello@bootstrapreal.com<br>
 <span class="glyphicon glyphicon-earphone"></span> (123) 456-7890</p> -->
-<?php }
+<?php
+}
 ?>
             </div>
         </div>
-<p class="copyright">Copyright &copy 2015-<?php echo date('Y');?>. <a href='http://www.propbot.org'>OpenPM</a> <a href="http://www.PropBot.com">PropBot.com</a> All rights reserved. </p>
+<p class="copyright">Copyright &copy 2015-<?php echo date('Y'); ?>. <a href='http://www.propbot.org'>OpenPM</a> <a href="http://www.PropBot.com">PropBot.com</a> All rights reserved. </p>
 
 
 </div></div>
-    <script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
     <script type="text/javascript">
    $(document).ready(function(){
             $('#news_btn').click(function(){
@@ -100,7 +98,7 @@
               }else{
                           $.ajax({
                           type: 'POST',
-                          url: "<?php echo base_url();?>home/newsLetterReg",
+                          url: "<?php echo base_url(); ?>home/newsLetterReg",
                           cache: false,
                           data:'email='+email,
                           dataType: "json",
@@ -137,7 +135,7 @@
 
        $.ajax({
                           type: 'POST',
-                          url: "<?php echo base_url();?>home/unSubprocess",
+                          url: "<?php echo base_url(); ?>home/unSubprocess",
                           cache: false,
                           data:'unsubkey='+unsubkey,
                           dataType: "json",
@@ -152,7 +150,7 @@
                                         }
                                       }
                                     });*/
-                                      window.location.href = "<?php echo base_url();?>";
+                                      window.location.href = "<?php echo base_url(); ?>";
                                   } else {
                                      /*bootbox.dialog({
                                       message: "Problem occured in  unsubscribing",
@@ -163,7 +161,7 @@
                                         }
                                       }
                                     });*/
-                                     window.location.href = "<?php echo base_url();?>";
+                                     window.location.href = "<?php echo base_url(); ?>";
                                   }
                           }
                       });
@@ -171,7 +169,7 @@
 
   })
 $("#btncancelun").click(function(){
-window.location.href = "<?php echo base_url();?>";
+window.location.href = "<?php echo base_url(); ?>";
 });
 
 });

@@ -1,5 +1,5 @@
-	<?php $this->load->view('admin/admin_header');?>
-		<?php $this->load->view('admin/admin_sidebar');?>
+	<?php $this->load->view('admin/admin_header'); ?>
+		<?php $this->load->view('admin/admin_sidebar'); ?>
 				<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -38,7 +38,7 @@
 								</small> -->
 							</h1>
 						</div><!-- /.page-header -->
-							<form class="form-horizontal" id="validation-form" method="post" action="<?php echo base_url();?>index.php/admin/addResProperty" enctype="multipart/form-data">
+							<form class="form-horizontal" id="validation-form" method="post" action="<?php echo base_url(); ?>index.php/admin/addResProperty" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
@@ -136,12 +136,11 @@
 
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -199,8 +198,8 @@ foreach ($option as $key => $val) {
 
 																			<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -264,12 +263,11 @@ foreach ($state_val AS $key => $value) {
 
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -284,12 +282,11 @@ foreach ($option as $key => $val) {
 																				<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -303,12 +300,11 @@ foreach ($option as $key => $val) {
 																				<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -673,8 +669,8 @@ foreach ($option as $key => $val) {
 																			<select class="col-xs-15 col-sm-10 state_val" id="state_diff" name="state_diff">
 																				<option value="">&nbsp;</option>
 																					<?php
-foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -1035,8 +1031,8 @@ foreach ($state_val AS $key => $value) {
 																			<select class="col-xs-15 col-sm-10 state_val" id="state_rent_common" name="state_rent_common">
 																				<option value="">&nbsp;</option>
 																					<?php
-foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -1098,12 +1094,11 @@ foreach ($state_val AS $key => $value) {
 																			<select id="typeId_rent_common" class="col-xs-10 col-sm-6"  name="typeId_rent_common" disabled>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -1118,12 +1113,11 @@ foreach ($option as $key => $val) {
 																			<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -1137,12 +1131,11 @@ foreach ($option as $key => $val) {
 																				<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -1403,8 +1396,8 @@ foreach ($option as $key => $val) {
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10 state_val" id="state_rent_diff" name="state_rent_diff">
 																				<option value="">&nbsp;</option>
-																					<?php foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+																					<?php foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -1851,8 +1844,8 @@ foreach ($option as $key => $val) {
 																			<select class="col-xs-15 col-sm-10 state_val" id="state" name="state">
 																				<option value="">&nbsp;</option>
 																					<?php
-foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -2188,8 +2181,8 @@ foreach ($state_val AS $key => $value) {
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10 state_val" id="state_rent" name="state_rent">
 																				<option value="">&nbsp;</option>
-																					<?php foreach ($state_val AS $key => $value) {
-	echo "<option value='" . $key . "'>" . $value . "</option>";
+																					<?php foreach ($state_val as $key => $value) {
+    echo "<option value='".$key."'>".$value.'</option>';
 }
 ?>
 
@@ -3938,12 +3931,11 @@ foreach ($state_val AS $key => $value) {
 																			<select id="typeId_com_sale_inte" class="col-xs-10 col-sm-6"  name="typeId_com_sale_inte" disabled>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -3957,12 +3949,11 @@ foreach ($option as $key => $val) {
 																				<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -3976,12 +3967,11 @@ foreach ($option as $key => $val) {
 																			<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -4234,12 +4224,11 @@ foreach ($option as $key => $val) {
 																			<select id="typeId_com_rent_inte" class="col-xs-10 col-sm-6"  name="typeId_com_rent_inte" disabled>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -4253,12 +4242,11 @@ foreach ($option as $key => $val) {
 																			<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -4272,12 +4260,11 @@ foreach ($option as $key => $val) {
 																			<option value="">&nbsp;</option>
 																				<?php
 foreach ($option as $key => $val) {
-	echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-	foreach ($option[$key] as $val2) {
-		echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-	}
-	echo "</optgroup> ";
+    echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+    foreach ($option[$key] as $val2) {
+        echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+    }
+    echo '</optgroup> ';
 }
 
 ?>
@@ -4623,7 +4610,7 @@ foreach ($option as $key => $val) {
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -4635,26 +4622,26 @@ foreach ($option as $key => $val) {
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.validate.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/additional-methods.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/select2.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
-		<!--<script src="<?php echo base_url();?>assets1/js/dropzone.min.js"></script> -->
-		<script src="<?php echo base_url();?>dropzone/jQuery.MultiFile.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.validate.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/additional-methods.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/select2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
+		<!--<script src="<?php echo base_url(); ?>assets1/js/dropzone.min.js"></script> -->
+		<script src="<?php echo base_url(); ?>dropzone/jQuery.MultiFile.min.js"></script>
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 
@@ -6174,7 +6161,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_common').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6196,7 +6183,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_common').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -6217,7 +6204,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_diff').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6239,7 +6226,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_diff').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -6260,7 +6247,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_rent_common').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6282,7 +6269,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_rent_common').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -6302,7 +6289,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_rent_diff').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6324,7 +6311,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_rent_diff').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -6344,7 +6331,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6366,7 +6353,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -6386,7 +6373,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_rent').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -6408,7 +6395,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_rent').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
