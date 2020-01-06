@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/admin_header');?>
+<?php $this->load->view('admin/admin_header'); ?>
 <?php $this->load->view('admin/admin_sidebar'); ?>
 		<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
@@ -41,19 +41,18 @@
 													<div class="widget-body">
 													<div class="widget-main padding-6">
 													
-													<form id="pwd_form" action="<?php echo base_url();?>admin/updateColor" method="post" enctype="multipart/form-data">
+													<form id="pwd_form" action="<?php echo base_url(); ?>admin/updateColor" method="post" enctype="multipart/form-data">
 												<div class="space-4"></div>
 												
 												<div class="row">
-												<?php if($contents){
-													foreach($contents as $content){
-														
-														}?>
+												<?php if ($contents) {
+    foreach ($contents as $content) {
+    } ?>
 														<div class="form-group">																						
 														<label class="col-sm-3 control-label no-padding-right"> Choose color</label>
 														<div class="col-xs-5 col-sm-4">
 																<div class="bootstrap-colorpicker">
-																<input id="colorpicker1" type="text" class="input-small" name="header_color" value="<?php echo $content->cvalue;?>" required/>
+																<input id="colorpicker1" type="text" class="input-small" name="header_color" value="<?php echo $content->cvalue; ?>" required/>
 																<input  type="hidden" name="container" value="header_color"/>
 															</div>
 														</div>
@@ -62,7 +61,8 @@
 														</div>
 												
 												</div>
-												<?php }?>
+												<?php
+}?>
 												</div>
 												
 												</div>
@@ -163,7 +163,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -175,27 +175,27 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 	
-		<script src="<?php echo base_url();?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.validate.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/additional-methods.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/select2.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap-colorpicker.min.js"></script>
-		 <script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<!-- <script src="<?php echo base_url();?>assets1/js/dropzone.min.js"></script> -->
+		<script src="<?php echo base_url(); ?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.validate.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/additional-methods.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/select2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap-colorpicker.min.js"></script>
+		 <script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<!-- <script src="<?php echo base_url(); ?>assets1/js/dropzone.min.js"></script> -->
 		<!-- ace scripts -->
 		
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -222,7 +222,7 @@
 		  				var header_color = $('#colorpicker1').val();
 		  				$.ajax({
 						        type: 'POST',
-						        url: "<?php echo base_url();?>admin/updateColor",
+						        url: "<?php echo base_url(); ?>admin/updateColor",
 						        cache: false,
 						        data:'header_color='+header_color+'&container=header',
 						        

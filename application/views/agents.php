@@ -18,7 +18,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container"> 
-    <span class="pull-right"><a href="<?php echo base_url();?>">Home</a> / Agents</span>
+    <span class="pull-right"><a href="<?php echo base_url(); ?>">Home</a> / Agents</span>
     <h2>Agents</h2>
 </div>
 </div>
@@ -31,19 +31,21 @@
 <div class="row">
   <div class="col-lg-8  col-lg-offset-2 col-sm-12">
       <!-- agents -->
-      <?php if($result) { foreach($result as $res){?>
+      <?php if ($result) {
+    foreach ($result as $res) {?>
       <div class="row">
-     <?php if($res->profile_pic!=""){?>
-        <div class="col-lg-2 col-sm-2 "><a href="#"><img src="<?php echo base_url(); ?>uploads/<?php echo $res->profile_pic;?>" class="img-responsive"  alt="<?php echo $res->fullname;?>" style="height: auto;"></a></div>
-        <?php }else{?>
-        <div class="col-lg-2 col-sm-2 "><a href="#"><img src="<?php echo base_url(); ?>uploads/no-image.png" class="img-responsive"  alt="<?php echo $res->fullname;?>"></a></div>
-        <?php }?>
-        <div class="col-lg-7 col-sm-7 "><h4><?php echo $res->fullname;?></h4><p><?php echo $res->description;?></p></div>
-        <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href=""><?php echo $res->email;?></a><br>
-        <span class="glyphicon glyphicon-earphone"></span> <?php echo $res->number;?></div>
+     <?php if ('' != $res->profile_pic) {?>
+        <div class="col-lg-2 col-sm-2 "><a href="#"><img src="<?php echo base_url(); ?>uploads/<?php echo $res->profile_pic; ?>" class="img-responsive"  alt="<?php echo $res->fullname; ?>" style="height: auto;"></a></div>
+        <?php } else {?>
+        <div class="col-lg-2 col-sm-2 "><a href="#"><img src="<?php echo base_url(); ?>uploads/no-image.png" class="img-responsive"  alt="<?php echo $res->fullname; ?>"></a></div>
+        <?php } ?>
+        <div class="col-lg-7 col-sm-7 "><h4><?php echo $res->fullname; ?></h4><p><?php echo $res->description; ?></p></div>
+        <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href=""><?php echo $res->email; ?></a><br>
+        <span class="glyphicon glyphicon-earphone"></span> <?php echo $res->number; ?></div>
       </div>
       <!-- agents -->
-      <?php }}?>
+      <?php }
+}?>
        <!-- agents -->
      
      

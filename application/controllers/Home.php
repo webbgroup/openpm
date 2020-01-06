@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') or exit('No direct script access allowed');
 /*
 
@@ -20,7 +21,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
-
     /**
      * Index Page for this controller.
      *
@@ -34,16 +34,17 @@ class Home extends CI_Controller
      *
      * So any other public methods not prefixed with an underscore will
      * map to /index.php/welcome/<method_name>
+     *
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function __construct()
     {
         parent::__construct();
         $this->load->model('home_model');
-        $this->load->library(array('session', 'form_validation', 'pagination'));
+        $this->load->library(['session', 'form_validation', 'pagination']);
         $this->load->helper('cookie');
-
     }
+
     public function index()
     {
         $this->header();
@@ -56,6 +57,7 @@ class Home extends CI_Controller
         $this->footer();
         //    $thi
     }
+
     public function about()
     {
         $this->header();
@@ -63,12 +65,14 @@ class Home extends CI_Controller
         $this->load->view('about', $data);
         $this->footer();
     }
+
     public function footer()
     {
         $data['address'] = $this->home_model->footerPageData();
         $data['style'] = $this->home_model->getStyle();
         $this->load->view('footer', $data);
     }
+
     public function header()
     {
         $data['style'] = $this->home_model->getStyleHead();
@@ -79,6 +83,7 @@ class Home extends CI_Controller
         $data['bannercolor'] = $this->home_model->getBanner();
         $this->load->view('header', $data);
     }
+
     public function agents()
     {
         $this->header();
@@ -86,6 +91,7 @@ class Home extends CI_Controller
         $this->load->view('agents', $data);
         $this->footer();
     }
+
     public function contact()
     {
         $this->header();
@@ -93,21 +99,22 @@ class Home extends CI_Controller
         $this->load->view('contact', $data);
         $this->footer();
     }
+
     public function forSale()
     {
         $this->header();
-        $config = array();
-        $config["base_url"] = base_url() . "home/forSale";
+        $config = [];
+        $config['base_url'] = base_url().'home/forSale';
         $total_row = $this->home_model->record_count();
-        $config["total_rows"] = $total_row;
-        $config["per_page"] = 18;
+        $config['total_rows'] = $total_row;
+        $config['per_page'] = 18;
         $config['use_page_numbers'] = true;
         $config['num_links'] = $total_row;
         $config['cur_tag_open'] = '&nbsp;<a class="current">';
         $config['cur_tag_close'] = '</a>';
         $config['next_link'] = 'Next';
         $config['prev_link'] = 'Previous';
-        $config["uri_segment"] = 3;
+        $config['uri_segment'] = 3;
 
         $this->pagination->initialize($config);
         if ($this->uri->segment(3)) {
@@ -126,45 +133,46 @@ class Home extends CI_Controller
 
         $limitStart = ($limitStart - 1) * $config["per_page"];*/
         // Limit start  instead of page;
-        $data["residential"] = $this->home_model->propertySaleListRes1($config["per_page"], $page);
+        $data['residential'] = $this->home_model->propertySaleListRes1($config['per_page'], $page);
 
-        $cpt = count($data["residential"]);
-        $data["commercial"] = null;
-        if ($cpt < $config["per_page"]) {
-            $config["per_page"] = $config["per_page"] - $cpt;
+        $cpt = count($data['residential']);
+        $data['commercial'] = null;
+        if ($cpt < $config['per_page']) {
+            $config['per_page'] = $config['per_page'] - $cpt;
             //echo $this->home_model->res_count;
             /*$first_total_pages = floor($this->home_model->res_count / $config["per_page"]) + ($this->home_model->res_count % $config["per_page"]);
             //echo $first_total_pages .;
             $limitStart = empty($page) ? $page = 1 : ($page-$first_total_pages);
             $config["per_page1"]= ($config["per_page"] - $cpt);*/
             //$config["per_page"]= $config["per_page"]-$cpt;
-            $data["commercial"] = $this->home_model->propertySaleListCom1($config["per_page"], $page);
+            $data['commercial'] = $this->home_model->propertySaleListCom1($config['per_page'], $page);
         }
         $data['hotpop'] = $this->home_model->hotPropSale();
         $str_links = $this->pagination->create_links();
-        $data["links"] = explode('&nbsp;', $str_links);
+        $data['links'] = explode('&nbsp;', $str_links);
 
-        $this->load->view("forsale", $data);
+        $this->load->view('forsale', $data);
         $this->footer();
 
-        /*$data['residential']=$this->home_model->propertySaleListRes();*/
+        // $data['residential']=$this->home_model->propertySaleListRes();
         // $this->load->view('forsale',$data);
     }
+
     public function forRent()
     {
         $this->header();
-        $config = array();
-        $config["base_url"] = base_url() . "home/forRent";
+        $config = [];
+        $config['base_url'] = base_url().'home/forRent';
         $total_row = $this->home_model->record_count_rent();
-        $config["total_rows"] = $total_row;
-        $config["per_page"] = 18;
+        $config['total_rows'] = $total_row;
+        $config['per_page'] = 18;
         $config['use_page_numbers'] = true;
         $config['num_links'] = $total_row;
         $config['cur_tag_open'] = '&nbsp;<a class="current">';
         $config['cur_tag_close'] = '</a>';
         $config['next_link'] = 'Next';
         $config['prev_link'] = 'Previous';
-        $config["uri_segment"] = 3;
+        $config['uri_segment'] = 3;
 
         $this->pagination->initialize($config);
         if ($this->uri->segment(3)) {
@@ -177,21 +185,22 @@ class Home extends CI_Controller
         $page =(($page-1) *10)-($page-1);
         }*/
 
-        $data["residential"] = $this->home_model->propertyRentListResd($config["per_page"], $page);
-        $cpt = count($data["residential"]);
-        $data["commercial"] = null;
-        if ($cpt < $config["per_page"]) {
-            $config["per_page"] = $config["per_page"] - $cpt;
-            $data["commercial"] = $this->home_model->propertyRentListCommercial($config["per_page"], $page);
+        $data['residential'] = $this->home_model->propertyRentListResd($config['per_page'], $page);
+        $cpt = count($data['residential']);
+        $data['commercial'] = null;
+        if ($cpt < $config['per_page']) {
+            $config['per_page'] = $config['per_page'] - $cpt;
+            $data['commercial'] = $this->home_model->propertyRentListCommercial($config['per_page'], $page);
         }
         $data['hotpop'] = $this->home_model->hotPropRent();
         $str_links = $this->pagination->create_links();
-        $data["links"] = explode('&nbsp;', $str_links);
+        $data['links'] = explode('&nbsp;', $str_links);
 
         // View data according to array.
-        $this->load->view("forrent", $data);
+        $this->load->view('forrent', $data);
         $this->footer();
     }
+
     public function propertySaleDetail()
     {
         $this->header();
@@ -201,10 +210,11 @@ class Home extends CI_Controller
         $data['interiors'] = $this->home_model->propertySaleDetailedInte($resId);
         /*    echo"<pre>";
         print_r($data);exit();*/
-        /*$data['agents']=$this->$this->home_model->postAgentData($resId);*/
+        // $data['agents']=$this->$this->home_model->postAgentData($resId);
         $this->load->view('prop_detail_sale', $data);
         $this->footer();
     }
+
     public function propertyComSaleDetail()
     {
         $this->header();
@@ -229,6 +239,7 @@ class Home extends CI_Controller
         $this->load->view('prop_detail_rent', $data);
         $this->footer();
     }
+
     public function propertyComRentDetail()
     {
         $this->header();
@@ -239,11 +250,13 @@ class Home extends CI_Controller
         $this->load->view('prop_com_rent_detail', $data);
         $this->footer();
     }
+
     public function register()
     {
         $this->load->view('register');
         $this->footer();
     }
+
     public function searchProp()
     {
         $this->header();
@@ -251,23 +264,23 @@ class Home extends CI_Controller
         $search_data = $this->input->post('search_data');
         $prop_type = $this->input->post('prop_type');
         $price = $this->input->post('price');
-        if ($prop_type != "") {
+        if ('' != $prop_type) {
             /*$newdata = array('type' => $prop_type);
             $this->session->set_userdata($newdata);
             echo $pro_type=$this->session->userdata('type');*/
-            /*$typeId = $this->input->post('typeId');*/
-            $config = array();
-            $config["base_url"] = base_url() . "home/searchProp";
+            // $typeId = $this->input->post('typeId');
+            $config = [];
+            $config['base_url'] = base_url().'home/searchProp';
             $total_row = $this->home_model->record_count_search($prop_type, $price, $search_data);
-            $config["total_rows"] = $total_row;
-            $config["per_page"] = 18;
+            $config['total_rows'] = $total_row;
+            $config['per_page'] = 18;
             $config['use_page_numbers'] = true;
             $config['num_links'] = $total_row;
             $config['cur_tag_open'] = '&nbsp;<a class="current">';
             $config['cur_tag_close'] = '</a>';
             $config['next_link'] = 'Next';
             $config['prev_link'] = 'Previous';
-            $config["uri_segment"] = 3;
+            $config['uri_segment'] = 3;
 
             $this->pagination->initialize($config);
             if ($this->uri->segment(3)) {
@@ -280,7 +293,7 @@ class Home extends CI_Controller
             $page =(($page-1) *10)-($page-1);
             }*/
 
-            $data["search_result_res"] = $this->home_model->propertySearchResult($config["per_page"], $page, $prop_type, $price, $search_data);
+            $data['search_result_res'] = $this->home_model->propertySearchResult($config['per_page'], $page, $prop_type, $price, $search_data);
             /*$cpt = count($data["search_result_res"]);
             $config["per_page"];
 
@@ -298,21 +311,22 @@ class Home extends CI_Controller
             $config['suffix'] = '?'.http_build_query($get_vars, "&");*/
 
             $str_links = $this->pagination->create_links();
-            $data["links"] = explode('&nbsp;', $str_links);
-            /*  print_r($data["links"]);*/
+            $data['links'] = explode('&nbsp;', $str_links);
+            // print_r($data["links"]);
 
             // View data according to array.
-            $data['search_arry'] = array('prop_type' => $prop_type, 'price' => $price, 'title' => $search_data);
-            $this->load->view("search_result", $data);
+            $data['search_arry'] = ['prop_type' => $prop_type, 'price' => $price, 'title' => $search_data];
+            $this->load->view('search_result', $data);
             $this->footer();
         } else {
             $url = 'home/index';
-            echo '<script>window.location.href = "' . base_url() . $url . '";</script>';
+            echo '<script>window.location.href = "'.base_url().$url.'";</script>';
         }
 
-        /*$data['residential']=$this->home_model->propertySaleListRes();*/
+        // $data['residential']=$this->home_model->propertySaleListRes();
         // $this->load->view('forsale',$data);
     }
+
     public function postEnquiry()
     {
         $agent_email = $this->input->post('agent_email');
@@ -334,31 +348,31 @@ class Home extends CI_Controller
         $web = $data['site_title']['contents']->cvalue;
         $this->email->from($from_email, $web);
         $this->email->to($to_email);
-        $this->email->subject("New Enquiry");
+        $this->email->subject('New Enquiry');
         $message = '<html><body>';
-        $message .= '<img src=' . base_url() . 'uploads/' . $site_main_logo . '" alt="WebGroup" />';
+        $message .= '<img src='.base_url().'uploads/'.$site_main_logo.'" alt="WebGroup" />';
         $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-        $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($name) . "</td></tr>";
-        $message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($from_email) . "</td></tr>";
-        $message .= "<tr><td><strong>Number:</strong> </td><td>" . strip_tags($number) . "</td></tr>";
-        $message .= "<tr><td><strong>Message:</strong> </td><td>" . strip_tags($text_message) . "</td></tr>";
-        $message .= "<tr style='background: #eee;'><td><strong>Property Title:</strong> </td><td>" . strip_tags($propid) . "</td></tr>";
-        $message .= "<tr style='background: #eee;'><td><strong>Property Title:</strong> </td><td>" . strip_tags($proptitle) . "</td></tr>";
-        $message .= "</table>";
-        $message .= "</body></html>";
+        $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>".strip_tags($name).'</td></tr>';
+        $message .= '<tr><td><strong>Email:</strong> </td><td>'.strip_tags($from_email).'</td></tr>';
+        $message .= '<tr><td><strong>Number:</strong> </td><td>'.strip_tags($number).'</td></tr>';
+        $message .= '<tr><td><strong>Message:</strong> </td><td>'.strip_tags($text_message).'</td></tr>';
+        $message .= "<tr style='background: #eee;'><td><strong>Property Title:</strong> </td><td>".strip_tags($propid).'</td></tr>';
+        $message .= "<tr style='background: #eee;'><td><strong>Property Title:</strong> </td><td>".strip_tags($proptitle).'</td></tr>';
+        $message .= '</table>';
+        $message .= '</body></html>';
         $this->email->message($message);
         if ($this->email->send()) {
             // mail sent
-            $val = array("success" => "yes");
+            $val = ['success' => 'yes'];
             $output = json_encode($val);
             echo $output;
         } else {
-            $val = array("success" => "no");
+            $val = ['success' => 'no'];
             $output = json_encode($val);
             echo $output;
         }
-
     }
+
     public function contactUs()
     {
         $name = $this->input->post('name');
@@ -376,15 +390,15 @@ class Home extends CI_Controller
         $web = $data['site_title']['contents']->cvalue;
         $this->email->from($from_email, $web);
         $this->email->to($smtp_email);
-        $this->email->subject("New Enquiry");
+        $this->email->subject('New Enquiry');
 
         $message = '<html><body>';
-        $message .= '<img src="' . base_url() . 'uploads/' . $site_main_logo . '" alt="Website Change Request" />';
+        $message .= '<img src="'.base_url().'uploads/'.$site_main_logo.'" alt="Website Change Request" />';
         $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-        $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($name) . "</td></tr>";
-        $message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($from_email) . "</td></tr>";
-        $message .= "<tr><td><strong>Number:</strong> </td><td>" . strip_tags($number) . "</td></tr>";
-        $message .= "<tr><td><strong>Message:</strong> </td><td>" . strip_tags($text_message) . "</td></tr>";
+        $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>".strip_tags($name).'</td></tr>';
+        $message .= '<tr><td><strong>Email:</strong> </td><td>'.strip_tags($from_email).'</td></tr>';
+        $message .= '<tr><td><strong>Number:</strong> </td><td>'.strip_tags($number).'</td></tr>';
+        $message .= '<tr><td><strong>Message:</strong> </td><td>'.strip_tags($text_message).'</td></tr>';
         /*$message .= "<tr><td><strong>URL To Change (main):</strong> </td><td>" . $_POST['URL-main'] . "</td></tr>";
         $addURLS = $_POST['addURLS'];
         if (($addURLS) != '') {
@@ -395,8 +409,8 @@ class Home extends CI_Controller
         $message .= "<tr><td><strong>CURRENT Content:</strong> </td><td>" . $curText . "</td></tr>";
         }
         $message .= "<tr><td><strong>NEW Content:</strong> </td><td>" . htmlentities($_POST['newText']) . "</td></tr>";*/
-        $message .= "</table>";
-        $message .= "</body></html>";
+        $message .= '</table>';
+        $message .= '</body></html>';
 
         $this->email->message($message);
         if ($this->email->send()) {
@@ -404,17 +418,17 @@ class Home extends CI_Controller
             // $this->session->set_flashdata('msg','<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
             echo "<script> alert('Your mail has been sent successfully');</script>";
             $url = 'home/contact';
-            echo '<script>window.location.href = "' . base_url() . $url . '";</script>';
-
+            echo '<script>window.location.href = "'.base_url().$url.'";</script>';
         } else {
-            echo $this->email->print_debugger();exit();
+            echo $this->email->print_debugger();
+            exit();
             //error
             echo "<script> alert('Mail count not be sent');</script>";
             $url = 'home/contact';
-            echo '<script>window.location.href = "' . base_url() . $url . '";</script>';
+            echo '<script>window.location.href = "'.base_url().$url.'";</script>';
         }
-
     }
+
     public function newsLetterReg()
     {
         $random_id_length = 12;
@@ -426,29 +440,30 @@ class Home extends CI_Controller
         $rnd_id = strip_tags(stripslashes($rnd_id));
 
         //Removing any . or / and reversing the string
-        $rnd_id = str_replace(".", "", $rnd_id);
-        $rnd_id = strrev(str_replace("/", "", $rnd_id));
+        $rnd_id = str_replace('.', '', $rnd_id);
+        $rnd_id = strrev(str_replace('/', '', $rnd_id));
 
         //finally I take the first 7 characters from the $rnd_id
         $rnd_id = substr($rnd_id, 0, $random_id_length);
         $rnd_id = strtoupper($rnd_id);
         $email = $this->input->post('email');
-        $db_data = array('email' => $email, 'key' => $rnd_id, 'status' => 1);
+        $db_data = ['email' => $email, 'key' => $rnd_id, 'status' => 1];
         $res = $this->home_model->newsLetterReg($db_data);
-        if ($res == 1) {
-            $val = array("success" => "yes");
+        if (1 == $res) {
+            $val = ['success' => 'yes'];
             $output = json_encode($val);
             echo $output;
         } else {
-            $val = array("success" => "no");
+            $val = ['success' => 'no'];
             $output = json_encode($val);
             echo $output;
         }
     }
+
     public function unSubscribe()
     {
         $key_id = $this->input->get('key');
-        $data['key_res'] = array('key' => $key_id);
+        $data['key_res'] = ['key' => $key_id];
         if ($key_id) {
             $this->header();
             $this->load->view('unsubscribe', $data);
@@ -456,26 +471,27 @@ class Home extends CI_Controller
             $this->footer();
         } else {
             $url = 'home/index';
-            echo '<script>window.location.href = "' . base_url() . $url . '";</script>';
+            echo '<script>window.location.href = "'.base_url().$url.'";</script>';
         }
     }
+
     public function unSubprocess()
     {
         $unsubkey = $this->input->post('unsubkey');
         $res = $this->home_model->unSubprocess($unsubkey);
         if ($res) {
-            $val = array("success" => "yes");
+            $val = ['success' => 'yes'];
             $output = json_encode($val);
             echo $output;
         } else {
-            $val = array("success" => "no");
+            $val = ['success' => 'no'];
             $output = json_encode($val);
             echo $output;
         }
     }
+
     public function testData()
     {
         $res = $this->home_model->testData();
     }
-
 }

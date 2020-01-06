@@ -45,7 +45,7 @@
 
 					<ul class="nav nav-list">
 						<li>
-							<a href="<?php echo base_url();?>admin/propertySaleList">
+							<a href="<?php echo base_url(); ?>admin/propertySaleList">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> Dashboard </span>
 							</a>
@@ -61,20 +61,20 @@
 							<ul class="submenu">
                                                 		</li>
                                                         		<li>
-                                                        		<a href="<?php echo base_url();?>admin/propAdd">
+                                                        		<a href="<?php echo base_url(); ?>admin/propAdd">
                                                                 		<i class="icon-home"></i>
                                                                 		<span class="menu-text"> Add Property </span>
                                                         		</a>
                                                 		</li>
 								<li>
-									<a href="<?php echo base_url();?>admin/propertySaleList">
+									<a href="<?php echo base_url(); ?>admin/propertySaleList">
 										<i class="icon-double-angle-right"></i>
 										For Sale
 									</a>
 								</li>
 
 								<li>
-									<a href="<?php echo base_url();?>index.php/admin/propertyRentList">
+									<a href="<?php echo base_url(); ?>index.php/admin/propertyRentList">
 										<i class="icon-double-angle-right"></i>
 										For Rent
 									</a>
@@ -83,7 +83,7 @@
 								
 							</ul>
 						</li>
-						<?php if($this->session->userdata('id')==1){?>
+						<?php if (1 == $this->session->userdata('id')) {?>
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-group"></i>
@@ -94,14 +94,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="<?php echo base_url();?>admin/addAgents">
+									<a href="<?php echo base_url(); ?>admin/addAgents">
 										<i class="icon-plus-sign bigger-120 green"></i>
 										Add Agents
 									</a>
 								</li>
 
 								<li>
-									<a href="<?php echo base_url();?>index.php/admin/manageAgents">
+									<a href="<?php echo base_url(); ?>index.php/admin/manageAgents">
 										<i class="icon-double-angle-right"></i>
 										Manage agents
 									</a>
@@ -111,20 +111,20 @@
 							</ul>
 						</li>
 						<?php } ?>
-						<?php if($this->session->userdata('id')&& $this->session->userdata('id')!=1){?>
+						<?php if ($this->session->userdata('id') && 1 != $this->session->userdata('id')) {?>
 							<li>
-							<a href="<?php echo base_url();?>admin/updateProfile">
+							<a href="<?php echo base_url(); ?>admin/updateProfile">
 								<i class="icon-text-width"></i>
 								<span class="menu-text"> Update profile </span>
 							</a>
 						</li>
 						<?php }?>
 						<li>
-							<a href="<?php echo base_url();?>admin/changePwd">
+							<a href="<?php echo base_url(); ?>admin/changePwd">
 								<i class="icon-key"></i>
 								<span class="menu-text"> Change Password </span>
 							</a>
-						<?php if($this->session->userdata('id')==1){?>
+						<?php if (1 == $this->session->userdata('id')) {?>
 						<li>
 									<a href="#" class="dropdown-toggle">
 										<i class="icon-double-angle-right"></i>
@@ -145,14 +145,14 @@
 
 											<ul class="submenu">
 												<li>
-													<a href="<?php echo base_url();?>admin/pages">
+													<a href="<?php echo base_url(); ?>admin/pages">
 														<i class="icon-plus-sign bigger-120 green"></i>
 														About us
 													</a>
 												</li>
 
 												<li>
-													<a href="<?php echo base_url();?>index.php/admin/footer">
+													<a href="<?php echo base_url(); ?>index.php/admin/footer">
 														<i class="icon-double-angle-right"></i>
 														Footer
 													</a>
@@ -172,32 +172,32 @@
 
 											<ul class="submenu">
 												<li>
-													<a href="<?php echo base_url();?>admin/pageConfigHeader">
+													<a href="<?php echo base_url(); ?>admin/pageConfigHeader">
 														<i class="icon-adjust"></i>
 														Header
 													</a>
 												</li>
 
 												<li>
-													<a href="<?php echo base_url();?>index.php/admin/pageConfigFooter">
+													<a href="<?php echo base_url(); ?>index.php/admin/pageConfigFooter">
 														<i class="icon-adjust"></i>
 														Footer
 													</a>
 												</li>
 												<li>
-													<a href="<?php echo base_url();?>index.php/admin/hyperLinkColor">
+													<a href="<?php echo base_url(); ?>index.php/admin/hyperLinkColor">
 														<i class="icon-adjust"></i>
 														Hyperlink
 													</a>
 												</li>
 												<li>
-													<a href="<?php echo base_url();?>index.php/admin/btnColor">
+													<a href="<?php echo base_url(); ?>index.php/admin/btnColor">
 														<i class="icon-adjust"></i>
 														Button
 													</a>
 												</li>
 												<li>
-													<a href="<?php echo base_url();?>index.php/admin/bannerColor">
+													<a href="<?php echo base_url(); ?>index.php/admin/bannerColor">
 														<i class="icon-adjust"></i>
 														Banner Color
 													</a>
@@ -205,31 +205,31 @@
 											</ul>
 										</li>
 										<li>
-											<a href="<?php echo base_url();?>index.php/admin/adTitle">
+											<a href="<?php echo base_url(); ?>index.php/admin/adTitle">
 											<i class="icon-plus-sign bigger-120 green"></i>
 											Title
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo base_url();?>index.php/admin/addLogo">
+											<a href="<?php echo base_url(); ?>index.php/admin/addLogo">
 											<i class="icon-plus-sign bigger-120 green"></i>
 											Logo
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo base_url();?>index.php/admin/adminCEmail">
+											<a href="<?php echo base_url(); ?>index.php/admin/adminCEmail">
 											<i class="icon-plus-sign bigger-120 green"></i>
 											Contact Email
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo base_url();?>index.php/admin/adminCEmailPass">
+											<a href="<?php echo base_url(); ?>index.php/admin/adminCEmailPass">
 											<i class="icon-plus-sign bigger-120 green"></i>
 											SMTP password
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo base_url();?>index.php/admin/officeAddr">
+											<a href="<?php echo base_url(); ?>index.php/admin/officeAddr">
 											<i class="icon-plus-sign bigger-120 green"></i>
 											Map Location
 											</a>
@@ -237,7 +237,7 @@
 									</ul>
 								</li>
 								<li>
-							<a href="<?php echo base_url();?>admin/adminProfile">
+							<a href="<?php echo base_url(); ?>admin/adminProfile">
 								<i class="icon-text-width"></i>
 								<span class="menu-text"> Update My profile </span>
 							</a>

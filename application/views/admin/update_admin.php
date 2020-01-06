@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/admin_header');?>
+<?php $this->load->view('admin/admin_header'); ?>
 <?php $this->load->view('admin/admin_sidebar'); ?>
 		<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
@@ -42,10 +42,9 @@
 													<div class="widget-body">
 													<div class="widget-main padding-6">
 													
-													<?php foreach($profile as $prof){
-
-														}?>
-													<form id="agents_form" action="<?php echo base_url();?>admin/updateAdmin" method="post" enctype="multipart/form-data">
+													<?php foreach ($profile as $prof) {
+}?>
+													<form id="agents_form" action="<?php echo base_url(); ?>admin/updateAdmin" method="post" enctype="multipart/form-data">
 													
 												<div class="space-4"></div>
 												
@@ -53,8 +52,8 @@
 														<div class="form-group">																						
 														<label class="col-sm-3 control-label no-padding-right"> User name</label>
 														<div class="col-xs-5 col-sm-4">
-																<input id="uname" class="col-xs-10 col-sm-6" type="text" name="uname" value="<?php echo $prof->username;?>" readonly required>
-																<input id="uid" type="hidden" name="uid" value="<?php echo $prof->id;?>">	
+																<input id="uname" class="col-xs-10 col-sm-6" type="text" name="uname" value="<?php echo $prof->username; ?>" readonly required>
+																<input id="uid" type="hidden" name="uid" value="<?php echo $prof->id; ?>">	
 														</div>
 												
 												</div>
@@ -65,7 +64,7 @@
 														<label class="col-sm-3 control-label no-padding-right"> Full Name</label>
 														<div class="col-xs-5 col-sm-4">
 						
-																<input id="fullname" class="col-xs-10 col-sm-6" type="text" name="fullname" value="<?php echo $prof->fullname;?>" required>	
+																<input id="fullname" class="col-xs-10 col-sm-6" type="text" name="fullname" value="<?php echo $prof->fullname; ?>" required>	
 				
 														</div>
 												
@@ -83,7 +82,7 @@
 																	<i class="icon-phone"></i>
 																</span>
 
-																<input class="col-xs-10 col-sm-6 input-mask-phone" type="text" id="form-field-mask-2" name="number" value="<?php echo $prof->number;?>" required/>
+																<input class="col-xs-10 col-sm-6 input-mask-phone" type="text" id="form-field-mask-2" name="number" value="<?php echo $prof->number; ?>" required/>
 															</div>
 														</div>
 												
@@ -94,7 +93,7 @@
 														<div class="form-group">																						
 														<label class="col-sm-3 control-label no-padding-right"> Decription</label>
 														<div class="col-xs-5 col-sm-4">
-															<textarea id="form-field-9" class="form-control limited" maxlength="255" name="description" required><?php echo $prof->description;?></textarea>
+															<textarea id="form-field-9" class="form-control limited" maxlength="255" name="description" required><?php echo $prof->description; ?></textarea>
 														</div>
 												
 												</div>
@@ -205,7 +204,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -217,25 +216,25 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 	
-		<script src="<?php echo base_url();?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.validate.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/additional-methods.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/select2.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
-		<!-- <script src="<?php echo base_url();?>assets1/js/dropzone.min.js"></script> -->
+		<script src="<?php echo base_url(); ?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.validate.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/additional-methods.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/select2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
+		<!-- <script src="<?php echo base_url(); ?>assets1/js/dropzone.min.js"></script> -->
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

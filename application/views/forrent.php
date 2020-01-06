@@ -18,7 +18,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container">
-    <span class="pull-right"><a href="<?php echo base_url();?>">Home</a> / Rent</span>
+    <span class="pull-right"><a href="<?php echo base_url(); ?>">Home</a> / Rent</span>
     <h2>Sale & Rent</h2>
 </div>
 </div>
@@ -31,7 +31,7 @@
 <div class="row">
 <div class="col-lg-3 col-sm-4 ">
 
-  <div class="search-form"><form id="prop_search2" method="post" action="<?php echo base_url();?>home/searchProp"><h4><span class="glyphicon glyphicon-search"></span> Search for</h4>
+  <div class="search-form"><form id="prop_search2" method="post" action="<?php echo base_url(); ?>home/searchProp"><h4><span class="glyphicon glyphicon-search"></span> Search for</h4>
     <input type="text" class="form-control" placeholder="Search of Properties" name="serach_data">
     <div class="row">
             <div class="col-lg-5">
@@ -60,17 +60,19 @@
 <div class="hot-properties hidden-xs">
 <h4>Hot Properties</h4>
 <?php if ($hotpop) {
-	foreach ($hotpop as $hotproperty) {
-		?>
+    foreach ($hotpop as $hotproperty) {
+        ?>
 
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url();?>uploads/<?php $pic_arr = explode(",", $hotproperty['filename']);
-		echo $pic_arr[0];?>" class="img-responsive img-circle" alt="properties"/></div>
+                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>uploads/<?php $pic_arr = explode(',', $hotproperty['filename']);
+        echo $pic_arr[0]; ?>" class="img-responsive img-circle" alt="properties"/></div>
                 <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $hotproperty['resId'];?>"><?php echo $hotproperty['title'];?></a></h5>
-                  <p class="price">$<?php echo number_format($hotproperty['rent']);?></p> </div>
+                  <h5><a href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $hotproperty['resId']; ?>"><?php echo $hotproperty['title']; ?></a></h5>
+                  <p class="price">$<?php echo number_format($hotproperty['rent']); ?></p> </div>
               </div>
-              <?php }}
+              <?php
+    }
+}
 ?>
 
 </div>
@@ -93,59 +95,63 @@
 
      <!-- properties -->
       <?php if ($residential) {
-	foreach ($residential as $res) {
-		?>
+    foreach ($residential as $res) {
+        ?>
       <div class="col-lg-4 col-sm-6" id="forsale" style="min-height: 408px;">
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url();?>uploads/<?php if ($res['filename'] == '') {?><?php } else {
-			$pic_ar = explode(",", $res['filename']);
-			echo $pic_ar[0];}
-		?>" class="img-responsive" alt="properties"  style="height:166px;display:block;">
+        <div class="image-holder"><img src="<?php echo base_url(); ?>uploads/<?php if ('' == $res['filename']) {?><?php } else {
+            $pic_ar = explode(',', $res['filename']);
+            echo $pic_ar[0];
+        } ?>" class="img-responsive" alt="properties"  style="height:166px;display:block;">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $res['resId'];?>"><?php echo $res['title'];?></a></h4>
-        <p class="price">$<?php echo number_format($res['rent']);?></p>
-       <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds'];?> </span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths'];?> </span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Garage Size"><?php if ($res['garagesize'] != "") {echo $res['garagesize'];} else {
-			echo "0";
-		}
-		?></span></div>
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertyRentDetail?id=<?php echo $res['resId'];?>">View Details</a>
+        <h4><a href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $res['resId']; ?>"><?php echo $res['title']; ?></a></h4>
+        <p class="price">$<?php echo number_format($res['rent']); ?></p>
+       <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $res['beds']; ?> </span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bath Room"><?php echo $res['baths']; ?> </span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Garage Size"><?php if ('' != $res['garagesize']) {
+            echo $res['garagesize'];
+        } else {
+            echo '0';
+        } ?></span></div>
+        <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertyRentDetail?id=<?php echo $res['resId']; ?>">View Details</a>
       </div>
       </div>
-      <?php }}
+      <?php
+    }
+}
 ?>
        <?php if ($commercial) {
-	foreach ($commercial as $res) {
-		?>
+    foreach ($commercial as $res) {
+        ?>
       <div class="col-lg-4 col-sm-6"  id="forrent" style="min-height: 408px;">
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url();?>uploads/<?php if ($res['filename'] == '') {?><?php } else {
-			$pic_ar = explode(",", $res['filename']);
-			echo $pic_ar[0];}
-		?>" class="img-responsive" alt="properties" style="height:166px;display:block;">
+        <div class="image-holder"><img src="<?php echo base_url(); ?>uploads/<?php if ('' == $res['filename']) {?><?php } else {
+            $pic_ar = explode(',', $res['filename']);
+            echo $pic_ar[0];
+        } ?>" class="img-responsive" alt="properties" style="height:166px;display:block;">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="<?php echo base_url();?>index.php/home/propertyComRentDetail?id=<?php echo $res['commId'];?>"><?php echo $res['title'];?></a></h4>
+        <h4><a href="<?php echo base_url(); ?>index.php/home/propertyComRentDetail?id=<?php echo $res['commId']; ?>"><?php echo $res['title']; ?></a></h4>
 
-      <?php if ($res['rent'] == 0) {?>
-           <p class="price">$<?php echo number_format($res['price']);?></p>
+      <?php if (0 == $res['rent']) {?>
+           <p class="price">$<?php echo number_format($res['price']); ?></p>
         <?php } else {?>
-         <p class="price">$<?php echo number_format($res['rent']);?><?php echo $res['type'];?></p>
+         <p class="price">$<?php echo number_format($res['rent']); ?><?php echo $res['type']; ?></p>
 
-          <?php }
-		?>
+          <?php } ?>
        <div class="listing-detail"> </div>
-         <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/propertyComRentDetail?id=<?php echo $res['commId'];?>">View Details</a>
+         <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/home/propertyComRentDetail?id=<?php echo $res['commId']; ?>">View Details</a>
       </div>
       </div>
-      <?php }}
+      <?php
+    }
+}
 ?>
         <div class="row">
       <div class="center">
 
 <ul class="pagination">
         <?php foreach ($links as $link) {
-	echo "<li>" . $link . "</li>";
+    echo '<li>'.$link.'</li>';
 }
 ?>
         </ul>

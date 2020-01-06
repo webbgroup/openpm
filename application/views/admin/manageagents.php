@@ -1,5 +1,5 @@
-	<?php $this->load->view('admin/admin_header');?>
-		<?php $this->load->view('admin/admin_sidebar');?>
+	<?php $this->load->view('admin/admin_header'); ?>
+		<?php $this->load->view('admin/admin_sidebar'); ?>
 				<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -74,8 +74,8 @@
 
 												<tbody>
 												<?php if ($result) {
-	foreach ($result as $res) {
-		?>
+    foreach ($result as $res) {
+        ?>
 													<tr>
 														<!-- <td class="center">
 															<label>
@@ -85,12 +85,11 @@
 														</td> -->
 
 														<td>
-															<?php if ($res->profile_pic != "") {?>
+															<?php if ('' != $res->profile_pic) {?>
 															<a href="#"><img style="width:100px; height:100 px;" src="<?php echo base_url(); ?>uploads/<?php echo $res->profile_pic; ?>" alt=""/></a>
 														<?php } else {?>
 															<a href="#"><img style="width:100px; height:100 px;" src="<?php echo base_url(); ?>uploads/no-image.png">
-														<?php }
-		?>
+														<?php } ?>
 														</td>
 														<td><?php echo $res->fullname; ?></td>
 														<td class="hidden-480"><?php echo $res->email; ?></td>
@@ -151,7 +150,8 @@
 															</div>
 														</td>
 													</tr>
-													<?php }
+													<?php
+    }
 }
 ?>
 

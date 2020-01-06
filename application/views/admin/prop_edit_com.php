@@ -1,5 +1,5 @@
-	<?php $this->load->view('admin/admin_header');?>
-		<?php $this->load->view('admin/admin_sidebar');?>
+	<?php $this->load->view('admin/admin_header'); ?>
+		<?php $this->load->view('admin/admin_sidebar'); ?>
 					<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -48,26 +48,25 @@
 												</div>
 												<div class="widget-body">
 													<div class="widget-main padding-6">
-														<form id="prop_edit" method="post" action="<?php echo base_url();?>admin/updateChanges" enctype="multipart/form-data">
+														<form id="prop_edit" method="post" action="<?php echo base_url(); ?>admin/updateChanges" enctype="multipart/form-data">
 														<?php foreach ($results as $result) {
-
 }
 ?>
-														<input type="hidden" name="typeId" id="typ_id" value="<?php echo $result['typeId'];?>">
-														<input type="hidden" name="forSale" id="for_sale" value="<?php echo $result['forSale'];?>">
-														<input type="hidden" name="uniq" id="uniq" value="<?php echo $result['uniqueId'];?>">
-															<?php if ($result['forSale'] == 1) {
-	?>
+														<input type="hidden" name="typeId" id="typ_id" value="<?php echo $result['typeId']; ?>">
+														<input type="hidden" name="forSale" id="for_sale" value="<?php echo $result['forSale']; ?>">
+														<input type="hidden" name="uniq" id="uniq" value="<?php echo $result['uniqueId']; ?>">
+															<?php if (1 == $result['forSale']) {
+    ?>
 
 																<div id="com_sale_common" style="display:block">
 															<div class="row">
-																<input type="hidden" name="id" id="com_form" value="<?php echo $result['commId'];?>">
+																<input type="hidden" name="id" id="com_form" value="<?php echo $result['commId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street)</label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1_common" class="col-xs-15 col-sm-10" type="text" name="street1_common" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1_common" class="col-xs-15 col-sm-10" type="text" name="street1_common" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 
 																</div>
@@ -79,7 +78,7 @@
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2_common" class="col-xs-15 col-sm-10" type="text" name="street2_common" size="25" maxlength="50" value="<?php echo $result['address2'];?>">
+																			<input id="street2_common" class="col-xs-15 col-sm-10" type="text" name="street2_common" size="25" maxlength="50" value="<?php echo $result['address2']; ?>">
 																		</div>
 
 																	</div>
@@ -93,7 +92,7 @@
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="city_common" name="city_common">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -111,10 +110,9 @@
 
 																				<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-		echo "<option value='" . $key . "'>" . $value . "</option>";
-	}
-	?>
+foreach ($state_val as $key => $value) {
+        echo "<option value='".$key."'>".$value.'</option>';
+    } ?>
 
 																			</select>
 																		</div>
@@ -130,7 +128,7 @@ foreach ($state_val AS $key => $value) {
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="zip_common" name="zip_common">
-																					<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																					<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 																			</select>
 																		</div>
 
@@ -153,17 +151,13 @@ foreach ($state_val AS $key => $value) {
 
 																				<?php
 
-	foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-
-			echo "<option value=" . $val2['typeId'] . $selected . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+    foreach ($option as $key => $val) {
+        echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+        foreach ($option[$key] as $val2) {
+            echo '<option value='.$val2['typeId'].$selected.'>'.$val2['description'].'</option>';
+        }
+        echo '</optgroup> ';
+    } ?>
 																			</select>
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
@@ -173,17 +167,14 @@ foreach ($state_val AS $key => $value) {
 																		<select id="typeId_common2" class="col-xs-10 col-sm-6"  name="typeId_common2">
 																				<?php
 
-	foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-			$selected = ($val2['typeId2'] == $result['typeId2']) ? "selected" : "";
-			echo "<option value=" . $val2['typeId'] . $selected . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+    foreach ($option as $key => $val) {
+        echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+        foreach ($option[$key] as $val2) {
+            $selected = ($val2['typeId2'] == $result['typeId2']) ? 'selected' : '';
+            echo '<option value='.$val2['typeId'].$selected.'>'.$val2['description'].'</option>';
+        }
+        echo '</optgroup> ';
+    } ?>
 																			</select>
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
@@ -193,15 +184,12 @@ foreach ($state_val AS $key => $value) {
 																			<select id="typeId_common3" class="col-xs-10 col-sm-6"  name="typeId_common3">
 																				<?php
 foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-			echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+        echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+        foreach ($option[$key] as $val2) {
+            echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+        }
+        echo '</optgroup> ';
+    } ?>
 																			</select>
 																		</div>
 
@@ -215,19 +203,19 @@ foreach ($option as $key => $val) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-5" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_common" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-5" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_common" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Price:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="price_common" class="col-xs-10 col-sm-6" type="text" name="price_common" placeholder="$" maxlength="13" value="<?php echo $result['price'];?>">
+																			<input id="price_common" class="col-xs-10 col-sm-6" type="text" name="price_common" placeholder="$" maxlength="13" value="<?php echo $result['price']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Fair market value</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="fmv_common" class="col-xs-10 col-sm-6" type="text" name="fmv_common" maxlength="13" value="<?php echo $result['fmv'];?>">
+																			<input id="fmv_common" class="col-xs-10 col-sm-6" type="text" name="fmv_common" maxlength="13" value="<?php echo $result['fmv']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -238,7 +226,7 @@ foreach ($option as $key => $val) {
 																			<label>MLS #</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="mls_common" class="col-xs-10 col-sm-6" type="text" name="mls_common" maxlength="25" value="<?php echo $result['mls'];?>">
+																			<input id="mls_common" class="col-xs-10 col-sm-6" type="text" name="mls_common" maxlength="25" value="<?php echo $result['mls']; ?>">
 																		</div>
 
 																		<div class="col-xs-4 col-sm-1">
@@ -262,7 +250,7 @@ foreach ($option as $key => $val) {
 																			<label>Property taxes</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="tax_common" class="col-xs-10 col-sm-6" type="text" name="tax_common" placeholder="$" maxlength="6" value="<?php echo $result['tax'];?>">
+																			<input id="tax_common" class="col-xs-10 col-sm-6" type="text" name="tax_common" placeholder="$" maxlength="6" value="<?php echo $result['tax']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -273,19 +261,19 @@ foreach ($option as $key => $val) {
 																			<label>Net Operating Income:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="noi_common" class="col-xs-10 col-sm-6" type="text" name="noi_common" placeholder="$" maxlength="15" value="<?php echo $result['noi'];?>">
+																			<input id="noi_common" class="col-xs-10 col-sm-6" type="text" name="noi_common" placeholder="$" maxlength="15" value="<?php echo $result['noi']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Gross Operating Income:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="goi_common" class="col-xs-10 col-sm-6" type="text" name="goi_common" placeholder="$" maxlength="15" value="<?php echo $result['noi'];?>">
+																			<input id="goi_common" class="col-xs-10 col-sm-6" type="text" name="goi_common" placeholder="$" maxlength="15" value="<?php echo $result['noi']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Occupancy Rate:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="occupancy_common" class="col-xs-10 col-sm-6" type="text" name="occupancy_common" placeholder="%" maxlength="5" value="<?php echo $result['occupancy'];?>">
+																			<input id="occupancy_common" class="col-xs-10 col-sm-6" type="text" name="occupancy_common" placeholder="%" maxlength="5" value="<?php echo $result['occupancy']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -296,19 +284,19 @@ foreach ($option as $key => $val) {
 																			<label>Operating Expenses:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="opExpenses_common" class="col-xs-10 col-sm-6" type="text" name="opExpenses_common" placeholder="$" maxlength="13" value="<?php echo $result['opExpenses'];?>">
+																			<input id="opExpenses_common" class="col-xs-10 col-sm-6" type="text" name="opExpenses_common" placeholder="$" maxlength="13" value="<?php echo $result['opExpenses']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Facility Size:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="sqFeet_common" class="col-xs-10 col-sm-6" type="text" name="sqFeet_common" placeholder="$" maxlength="10" value="<?php echo $result['sqfeet'];?>">
+																			<input id="sqFeet_common" class="col-xs-10 col-sm-6" type="text" name="sqFeet_common" placeholder="$" maxlength="10" value="<?php echo $result['sqfeet']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Number of floors:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="numFloors_common" class="col-xs-10 col-sm-6" type="text" name="numFloors_common" placeholder="%" maxlength="2" value="<?php echo $result['numfloors'];?>">
+																			<input id="numFloors_common" class="col-xs-10 col-sm-6" type="text" name="numFloors_common" placeholder="%" maxlength="2" value="<?php echo $result['numfloors']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -319,19 +307,19 @@ foreach ($option as $key => $val) {
 																			<label>Traffic count:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="trafficCount_common" class="col-xs-10 col-sm-6" type="text" name="trafficCount_common" maxlength="6" value="<?php echo $result['trafficcount'];?>">
+																			<input id="trafficCount_common" class="col-xs-10 col-sm-6" type="text" name="trafficCount_common" maxlength="6" value="<?php echo $result['trafficcount']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Year Built</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="yearBuilt_common" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_common" maxlength="4" value="<?php echo $result['yearbuilt'];?>">
+																			<input id="yearBuilt_common" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_common" maxlength="4" value="<?php echo $result['yearbuilt']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Parking ratio</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-2">
-																			<input id="parkingRatio_common" class="col-xs-10 col-sm-6" type="text" name="parkingRatio_common" maxlength="6" value="<?php echo $result['parkingratio'];?>">
+																			<input id="parkingRatio_common" class="col-xs-10 col-sm-6" type="text" name="parkingRatio_common" maxlength="6" value="<?php echo $result['parkingratio']; ?>">
 																		</div>
 																		<div class="col-xs-5 col-sm-1">
 																			<label>Tspace(s) / 1,000 ft.</label><span class="super">2</span>
@@ -345,19 +333,19 @@ foreach ($option as $key => $val) {
 																			<label># of parking spaces</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="parkingSpaces_common" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_common" maxlength="6" value="<?php echo $result['parkingSpaces'];?>">
+																			<input id="parkingSpaces_common" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_common" maxlength="6" value="<?php echo $result['parkingSpaces']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Number of units:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="numUnits_common" class="col-xs-10 col-sm-6" type="text" name="numUnits_common" maxlength="3" value="<?php echo $result['numUnits'];?>">
+																			<input id="numUnits_common" class="col-xs-10 col-sm-6" type="text" name="numUnits_common" maxlength="3" value="<?php echo $result['numUnits']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label># of dock high doors</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="dockDoors_common" class="col-xs-10 col-sm-6" type="text" name="dockDoors_common" value="<?php echo $result['dockDoors'];?>">
+																			<input id="dockDoors_common" class="col-xs-10 col-sm-6" type="text" name="dockDoors_common" value="<?php echo $result['dockDoors']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -369,19 +357,19 @@ foreach ($option as $key => $val) {
 																			<label># of grade-level doors:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="gradeDoors_common" class="col-xs-10 col-sm-6" type="text" name="gradeDoors_common" maxlength="10" value="<?php echo $result['gradeDoors'];?>">
+																			<input id="gradeDoors_common" class="col-xs-10 col-sm-6" type="text" name="gradeDoors_common" maxlength="10" value="<?php echo $result['gradeDoors']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Property taxes</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="tax_common" class="col-xs-10 col-sm-6" type="text" name="tax_common" maxlength="6" value="<?php echo $result['tax'];?>">
+																			<input id="tax_common" class="col-xs-10 col-sm-6" type="text" name="tax_common" maxlength="6" value="<?php echo $result['tax']; ?>">
 																		</div>
 																		<div class="col-xs-3 col-sm-1">
 																			<label>Lot Size:</label>
 																		</div>
 																		<div class="col-xs-5 col-sm-1">
-																			<input id="lotSize_common" class="col-xs-20 col-sm-10" type="text" name="lotSize_common" maxlength="10" value="<?php echo $result['lotsize'];?>">
+																			<input id="lotSize_common" class="col-xs-20 col-sm-10" type="text" name="lotSize_common" maxlength="10" value="<?php echo $result['lotsize']; ?>">
 																			</div>
 
 																			<div class="col-xs-5 col-sm-2">
@@ -399,7 +387,7 @@ foreach ($option as $key => $val) {
 																			<label>Zoning</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="zoning_common" class="col-xs-10 col-sm-6" type="text" name="zoning_common" value="<?php echo $result['zoning'];?>">
+																			<input id="zoning_common" class="col-xs-10 col-sm-6" type="text" name="zoning_common" value="<?php echo $result['zoning']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Class type:</label>
@@ -414,8 +402,9 @@ foreach ($option as $key => $val) {
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
 																			<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers_common"  value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers_common"  value="1"<?php if (1 == $result['lawnSprinklers']) {
+        echo 'checked';
+    } ?>>
 																				<span class="lbl"> Lawn sprinklers</span>
 																			</label>
 																		</div>
@@ -427,22 +416,25 @@ foreach ($option as $key => $val) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="courtyard_common"  value="1"<?php if ($result['courtyard'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="courtyard_common"  value="1"<?php if (1 == $result['courtyard']) {
+        echo 'checked';
+    } ?>>
 																				<span class="lbl">  Courtyard</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="fenced_common"  value="1"<?php if ($result['fenced'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="fenced_common"  value="1"<?php if (1 == $result['fenced']) {
+        echo 'checked';
+    } ?>>
 																				<span class="lbl"> Fenced</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
 																		<label>
-																				<input class="ace" type="checkbox" name="cranes_common"  value="1"<?php if ($result['cranes'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="cranes_common"  value="1"<?php if (1 == $result['cranes']) {
+        echo 'checked';
+    } ?>>
 																				<span class="lbl"> Cranes</span>
 																		</label>
 																		</div>
@@ -454,8 +446,9 @@ foreach ($option as $key => $val) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="railYard_common"  value="1"<?php if ($result['rail'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="railYard_common"  value="1"<?php if (1 == $result['rail']) {
+        echo 'checked';
+    } ?>>
 																				<span class="lbl"> Adjacent to railyard</span>
 																			</label>
 																		</div>
@@ -475,7 +468,7 @@ foreach ($option as $key => $val) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="title_common" class="form-control"  name="title_common" maxlength="25"><?php echo $result['title'];?></textarea>
+																			<textarea id="title_common" class="form-control"  name="title_common" maxlength="25"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -487,7 +480,7 @@ foreach ($option as $key => $val) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_common" class="form-control"  name="description_common"><?php echo $result['description'];?></textarea>
+																			<textarea id="description_common" class="form-control"  name="description_common"><?php echo $result['description']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -507,19 +500,20 @@ foreach ($option as $key => $val) {
 														</div>
 
 
-																<?php } else {
-	?>
+																<?php
+} else {
+        ?>
 
 
 																<div id="com_rent_common" style="display:block">
 																<div class="row">
-																<input type="hidden" name="id" id="com_frm2" value="<?php echo $result['commId'];?>">
+																<input type="hidden" name="id" id="com_frm2" value="<?php echo $result['commId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street) </label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1_rent_common" class="col-xs-15 col-sm-10" type="text" name="street1_rent_common" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1_rent_common" class="col-xs-15 col-sm-10" type="text" name="street1_rent_common" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 
 																</div>
@@ -531,7 +525,7 @@ foreach ($option as $key => $val) {
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2_rent_common" class="col-xs-15 col-sm-10" type="text" name="street2_rent_common" size="25" maxlength="50" value="<?php echo $result['address2'];?>">
+																			<input id="street2_rent_common" class="col-xs-15 col-sm-10" type="text" name="street2_rent_common" size="25" maxlength="50" value="<?php echo $result['address2']; ?>">
 																		</div>
 
 																	</div>
@@ -545,7 +539,7 @@ foreach ($option as $key => $val) {
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="city_rent_common" name="city_rent_common">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -562,10 +556,9 @@ foreach ($option as $key => $val) {
 																			<select class="col-xs-15 col-sm-10" id="state_rent_common" name="state_rent_common">
 																			<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-		echo "<option value='" . $key . "'>" . $value . "</option>";
-	}
-	?>
+foreach ($state_val as $key => $value) {
+            echo "<option value='".$key."'>".$value.'</option>';
+        } ?>
 
 																			</select>
 																		</div>
@@ -581,7 +574,7 @@ foreach ($state_val AS $key => $value) {
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="zip_rent_common" name="zip_rent_common">
-																				<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																				<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 
 																			</select>
 																		</div>
@@ -604,15 +597,12 @@ foreach ($state_val AS $key => $value) {
 																			<select id="typeId_rent_common" class="col-xs-10 col-sm-6"  name="typeId_rent_common" disabled>
 																				<?php
 foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-			echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+            echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+            foreach ($option[$key] as $val2) {
+                echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+            }
+            echo '</optgroup> ';
+        } ?>
 																			</select>
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
@@ -622,15 +612,12 @@ foreach ($option as $key => $val) {
 																			<select id="typeId2_rent_common" class="col-xs-10 col-sm-6"  name="typeId2_rent_common">
 																				<?php
 foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-			echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+            echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+            foreach ($option[$key] as $val2) {
+                echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+            }
+            echo '</optgroup> ';
+        } ?>
 																			</select>
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
@@ -640,15 +627,12 @@ foreach ($option as $key => $val) {
 																			<select id="typeId3_rent_common" class="col-xs-10 col-sm-6"  name="typeId3_rent_common">
 																				<?php
 foreach ($option as $key => $val) {
-		echo "<optgroup label='$key' style='font-weight:bold;font-size:10px;color:black;'>";
-		foreach ($option[$key] as $val2) {
-			echo "<option value=" . $val2['typeId'] . ">" . $val2['description'] . "</option>";
-
-		}
-		echo "</optgroup> ";
-	}
-
-	?>
+            echo "<optgroup label='{$key}' style='font-weight:bold;font-size:10px;color:black;'>";
+            foreach ($option[$key] as $val2) {
+                echo '<option value='.$val2['typeId'].'>'.$val2['description'].'</option>';
+            }
+            echo '</optgroup> ';
+        } ?>
 																			</select>
 																		</div>
 
@@ -662,13 +646,13 @@ foreach ($option as $key => $val) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-6" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent_common" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-6" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent_common" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Rent:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-1">
-																			<input id="price_rent_common" class="col-xs-10 col-sm-10" type="text" name="price_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['price'];?>">
+																			<input id="price_rent_common" class="col-xs-10 col-sm-10" type="text" name="price_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['price']; ?>">
 																		</div>
 																		<div class="col-xs-5 col-sm-2">
 																		<select id="rentType_rent_common" class="col-xs-20 col-sm-10" name="rentType_rent_common">
@@ -701,7 +685,7 @@ foreach ($option as $key => $val) {
 																			<label>Lease term:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-1">
-																			<input id="leaseTerm_rent_common" class="col-xs-10 col-sm10" type="text" name="leaseTerm_rent_common" placeholder="" maxlength="13" value="<?php echo $result['leaseTerm'];?>">
+																			<input id="leaseTerm_rent_common" class="col-xs-10 col-sm10" type="text" name="leaseTerm_rent_common" placeholder="" maxlength="13" value="<?php echo $result['leaseTerm']; ?>">
 																		</div>
 																		<div class="col-xs-5 col-sm-2">
 																		<select id="leaseDuration_rent_common" class="col-xs-20 col-sm-10" name="leaseDuration_rent_common">
@@ -716,13 +700,13 @@ foreach ($option as $key => $val) {
 																			<label>Procurement fee</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="procurementFee_rent_common" class="col-xs-10 col-sm10" type="text" name="procurementFee_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['procurement'];?>">
+																			<input id="procurementFee_rent_common" class="col-xs-10 col-sm10" type="text" name="procurementFee_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['procurement']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Traffic count</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="trafficCount_rent_common" class="col-xs-10 col-sm-6" type="text" name="trafficCount_rent_common" placeholder="" maxlength="6" value="<?php echo $result['trafficcount'];?>">
+																			<input id="trafficCount_rent_common" class="col-xs-10 col-sm-6" type="text" name="trafficCount_rent_common" placeholder="" maxlength="6" value="<?php echo $result['trafficcount']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -733,13 +717,13 @@ foreach ($option as $key => $val) {
 																			<label>Property taxes:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="tax_rent_common" class="col-xs-10 col-sm-6" type="text" name="tax_rent_common" placeholder="$" maxlength="6" value="<?php echo $result['tax'];?>">
+																			<input id="tax_rent_common" class="col-xs-10 col-sm-6" type="text" name="tax_rent_common" placeholder="$" maxlength="6" value="<?php echo $result['tax']; ?>">
 																		</div>
 																		<div class="col-xs-3 col-sm-1">
 																			<label>Lot Size:</label>
 																		</div>
 																		<div class="col-xs-5 col-sm-1">
-																			<input id="lotSize_rent_common" class="col-xs-20 col-sm-10" type="text" name="lotSize_rent_common" maxlength="10" value="<?php echo $result['lotsize'];?>">
+																			<input id="lotSize_rent_common" class="col-xs-20 col-sm-10" type="text" name="lotSize_rent_common" maxlength="10" value="<?php echo $result['lotsize']; ?>">
 																		</div>
 
 																			<div class="col-xs-5 col-sm-2">
@@ -752,7 +736,7 @@ foreach ($option as $key => $val) {
 																			<label>Zoning</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="zoning_rent_common" class="col-xs-10 col-sm-6" type="text" name="zoning_rent_common" placeholder="" maxlength="15" value="<?php echo $result['zoning'];?>">
+																			<input id="zoning_rent_common" class="col-xs-10 col-sm-6" type="text" name="zoning_rent_common" placeholder="" maxlength="15" value="<?php echo $result['zoning']; ?>">
 																		</div>
 
 																	</div>
@@ -764,20 +748,22 @@ foreach ($option as $key => $val) {
 																			<label>Operating Expenses:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="opExpenses_rent_common" class="col-xs-10 col-sm-6" type="text" name="opExpenses_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['opExpenses'];?>">
+																			<input id="opExpenses_rent_common" class="col-xs-10 col-sm-6" type="text" name="opExpenses_rent_common" placeholder="$" maxlength="13" value="<?php echo $result['opExpenses']; ?>">
 																		</div>
 
 																		<div class="col-xs-10 col-sm-3">
 																			<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers_rent_common"  value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers_rent_common"  value="1"<?php if (1 == $result['lawnSprinklers']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Lawn sprinklers</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="courtyard_rent_common" value="1"<?php if ($result['courtyard'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="courtyard_rent_common" value="1"<?php if (1 == $result['courtyard']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl">  Courtyard</span>
 																			</label>
 																		</div>
@@ -790,22 +776,25 @@ foreach ($option as $key => $val) {
 
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="fenced_rent_common" value="1"<?php if ($result['fenced'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="fenced_rent_common" value="1"<?php if (1 == $result['fenced']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Fenced</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
 																		<label>
-																				<input class="ace" type="checkbox" name="cranes_rent_common"  value="1"<?php if ($result['cranes'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="cranes_rent_common"  value="1"<?php if (1 == $result['cranes']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Cranes</span>
 																		</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="railYard_rent_common"  value="1"<?php if ($result['rail'] == 1) {echo 'checked';}
-	?>>
+																				<input class="ace" type="checkbox" name="railYard_rent_common"  value="1"<?php if (1 == $result['rail']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Adjacent to railyard</span>
 																			</label>
 																		</div>
@@ -826,7 +815,7 @@ foreach ($option as $key => $val) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="title_rent_common" class="form-control"  name="title_rent_common" maxlength="25"><?php echo $result['title'];?></textarea>
+																			<textarea id="title_rent_common" class="form-control"  name="title_rent_common" maxlength="25"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -838,7 +827,7 @@ foreach ($option as $key => $val) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_rent_common" class="form-control"  name="description_rent_common"><?php echo $result['description'];?></textarea>
+																			<textarea id="description_rent_common" class="form-control"  name="description_rent_common"><?php echo $result['description']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -856,7 +845,8 @@ foreach ($option as $key => $val) {
 																</div>
 														</div>
 
-														<?php }
+														<?php
+    }
 ?>
 														<div class="row">
 															<div class="form-group">
@@ -955,7 +945,7 @@ foreach ($option as $key => $val) {
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -967,25 +957,25 @@ foreach ($option as $key => $val) {
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.validate.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/additional-methods.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/select2.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
-		<!-- <script src="<?php echo base_url();?>assets1/js/dropzone.min.js"></script> -->
+		<script src="<?php echo base_url(); ?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.validate.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/additional-methods.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/select2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
+		<!-- <script src="<?php echo base_url(); ?>assets1/js/dropzone.min.js"></script> -->
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -1080,26 +1070,26 @@ foreach ($option as $key => $val) {
 
 
 
-				$("#typeId_common").val('<?php echo $result["typeId"];?>');
-				$("#typeId_common2").val('<?php echo $result["typeId2"];?>');
-				$("#typeId_common3").val('<?php echo $result["typeId3"];?>');
-				$("#status_common").val('<?php echo $result["status"];?>');
-				//$("#useAcreage_common").val('<?php echo $result["useacreage"];?>');
-				$("#class_common").val('<?php echo $result["class"];?>');
-				$('#state_common').val('<?php echo $result["state"];?>');
-				/*$('#city_common').val('<?php echo $result["city"];?>');
-				$('#zip_common').val('<?php echo $result["zip"];?>');*/
+				$("#typeId_common").val('<?php echo $result['typeId']; ?>');
+				$("#typeId_common2").val('<?php echo $result['typeId2']; ?>');
+				$("#typeId_common3").val('<?php echo $result['typeId3']; ?>');
+				$("#status_common").val('<?php echo $result['status']; ?>');
+				//$("#useAcreage_common").val('<?php echo $result['useacreage']; ?>');
+				$("#class_common").val('<?php echo $result['class']; ?>');
+				$('#state_common').val('<?php echo $result['state']; ?>');
+				/*$('#city_common').val('<?php echo $result['city']; ?>');
+				$('#zip_common').val('<?php echo $result['zip']; ?>');*/
 			}else{
 
-				$("#typeId2_rent_common").val('<?php echo $result["typeId2"];?>');
-				$("#typeId3_rent_common").val('<?php echo $result["typeId2"];?>');
-				$("#rentType_rent_common").val('<?php echo $result["rentType"];?>');
-				$("#leaseType_rent_common").val('<?php echo $result["leaseType"];?>');
-				$("#leaseDuration_rent_common").val('<?php echo $result["leaseDuration"];?>');
-				//$("#useAcreage_rent_common").val('<?php echo $result["useacreage"];?>');
-				$('#state_rent_common').val('<?php echo $result["state"];?>');
-				/*$('#city_rent_common').val('<?php echo $result["city"];?>');
-				$('#zip_rent_common').val('<?php echo $result["zip"];?>');*/
+				$("#typeId2_rent_common").val('<?php echo $result['typeId2']; ?>');
+				$("#typeId3_rent_common").val('<?php echo $result['typeId2']; ?>');
+				$("#rentType_rent_common").val('<?php echo $result['rentType']; ?>');
+				$("#leaseType_rent_common").val('<?php echo $result['leaseType']; ?>');
+				$("#leaseDuration_rent_common").val('<?php echo $result['leaseDuration']; ?>');
+				//$("#useAcreage_rent_common").val('<?php echo $result['useacreage']; ?>');
+				$('#state_rent_common').val('<?php echo $result['state']; ?>');
+				/*$('#city_rent_common').val('<?php echo $result['city']; ?>');
+				$('#zip_rent_common').val('<?php echo $result['zip']; ?>');*/
 			}//com_frm2com_frm_ty
 
 
@@ -1109,7 +1099,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_common').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -1130,7 +1120,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_common').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -1150,7 +1140,7 @@ foreach ($option as $key => $val) {
 							var state_id = $('#state_rent_common').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -1172,7 +1162,7 @@ foreach ($option as $key => $val) {
 								var city_id = $('#city_rent_common').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",

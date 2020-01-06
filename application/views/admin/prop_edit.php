@@ -1,5 +1,5 @@
-	<?php $this->load->view('admin/admin_header');?>
-		<?php $this->load->view('admin/admin_sidebar');?>
+	<?php $this->load->view('admin/admin_header'); ?>
+		<?php $this->load->view('admin/admin_sidebar'); ?>
 					<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -48,35 +48,34 @@
 												</div>
 												<div class="widget-body">
 													<div class="widget-main padding-6">
-														<form id="prop_edit" method="post" action="<?php echo base_url();?>admin/updateChanges" enctype="multipart/form-data">
+														<form id="prop_edit" method="post" action="<?php echo base_url(); ?>admin/updateChanges" enctype="multipart/form-data">
 														<?php foreach ($results as $result) {
-
 }
 ?>
-														<input type="hidden" name="typeId" id="typ_id" value="<?php echo $result['typeId'];?>">
-														<input type="hidden" name="forSale" id="for_sale" value="<?php echo $result['forSale'];?>">
-														<input type="hidden" name="uniq" id="uniq" value="<?php echo $result['uniqueId'];?>">
+														<input type="hidden" name="typeId" id="typ_id" value="<?php echo $result['typeId']; ?>">
+														<input type="hidden" name="forSale" id="for_sale" value="<?php echo $result['forSale']; ?>">
+														<input type="hidden" name="uniq" id="uniq" value="<?php echo $result['uniqueId']; ?>">
 
-													<?php if ($result['typeId'] == 53 || $result['typeId'] == 55 || $result['typeId'] == 54 || $result['typeId'] == 60 || $result['typeId'] == 63 || $result['typeId'] == 62 || $result['typeId'] == 61 || $result['typeId'] == 77 || $result['typeId'] == 76 || $result['typeId'] == 78) {
-	if ($result['forSale'] == 1) {
-		?>
+													<?php if (53 == $result['typeId'] || 55 == $result['typeId'] || 54 == $result['typeId'] || 60 == $result['typeId'] || 63 == $result['typeId'] || 62 == $result['typeId'] || 61 == $result['typeId'] || 77 == $result['typeId'] || 76 == $result['typeId'] || 78 == $result['typeId']) {
+    if (1 == $result['forSale']) {
+        ?>
 
 														<div id="res_sale" style="display:block">
 
 															<div class="row">
-																<input type="hidden" name="id" value="<?php echo $result['resId'];?>">
+																<input type="hidden" name="id" value="<?php echo $result['resId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street) Residential</label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1" class="col-xs-15 col-sm-10" type="text" name="street1" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1" class="col-xs-15 col-sm-10" type="text" name="street1" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 																	<div class="col-xs-6 col-sm-2">
 																		<label>Elementary School: </label>
 																	</div>
 																	<div class="col-xs-8 col-sm-3">
-																		<input id="elemSchool" class="col-xs-10 col-sm-5" type="text" name="elemSchool" size="25" maxlength="50" value="<?php echo $result['elemSchool'];?>">
+																		<input id="elemSchool" class="col-xs-10 col-sm-5" type="text" name="elemSchool" size="25" maxlength="50" value="<?php echo $result['elemSchool']; ?>">
 																	</div>
 																</div>
 																</div>
@@ -87,13 +86,13 @@
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2" class="col-xs-15 col-sm-10" type="text" name="street2" size="25" maxlength="50" value="<?php echo $result['address2'];?>">
+																			<input id="street2" class="col-xs-15 col-sm-10" type="text" name="street2" size="25" maxlength="50" value="<?php echo $result['address2']; ?>">
 																		</div>
 																		<div class="col-xs-6 col-sm-2">
 																			<label>Middile School: </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="midSchool" class="col-xs-10 col-sm-5" type="text" name="midSchool" size="25" maxlength="50" value="<?php echo $result['midSchool'];?>">
+																			<input id="midSchool" class="col-xs-10 col-sm-5" type="text" name="midSchool" size="25" maxlength="50" value="<?php echo $result['midSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -105,8 +104,8 @@
 																			<label>Property City:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="city" name="city" value="<?php echo $result['city'];?>">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="city" name="city" value="<?php echo $result['city']; ?>">
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -114,7 +113,7 @@
 																			<label>High School: : </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="highSchool" class="col-xs-10 col-sm-5" type="text" name="highSchool" size="25" maxlength="50" value="<?php echo $result['highSchool'];?>">
+																			<input id="highSchool" class="col-xs-10 col-sm-5" type="text" name="highSchool" size="25" maxlength="50" value="<?php echo $result['highSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -128,10 +127,9 @@
 																			<select class="col-xs-15 col-sm-10" id="state" name="state">
 																					<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-			echo "<option value='" . $key . "'>" . $value . "</option>";
-		}
-		?>
+foreach ($state_val as $key => $value) {
+            echo "<option value='".$key."'>".$value.'</option>';
+        } ?>
 
 																			</select>
 																		</div>
@@ -147,7 +145,7 @@ foreach ($state_val AS $key => $value) {
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="zip" name="zip">
-																				<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																				<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 
 																			</select>
 																		</div>
@@ -155,7 +153,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Neighborhood Name:</label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="neighborhood" class="col-xs-10 col-sm-5" type="text" name="neighborhood" size="25" maxlength="50" value="<?php echo $result['neighborhood'];?>">
+																			<input id="neighborhood" class="col-xs-10 col-sm-5" type="text" name="neighborhood" size="25" maxlength="50" value="<?php echo $result['neighborhood']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -169,22 +167,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="waterfront" id="waterfront" value="1"<?php if ($result['waterfront'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="waterfront" id="waterfront" value="1"<?php if (1 == $result['waterfront']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Waterfront</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="golfCourse"  value="1"<?php if ($result['golf'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="golfCourse"  value="1"<?php if (1 == $result['golf']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Golf course</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="commPool"  value="1"<?php if ($result['commPool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="commPool"  value="1"<?php if (1 == $result['commPool']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Community pool</span>
 																		</label>
 																		</div>
@@ -196,22 +197,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="pool"  value="1"<?php if ($result['pool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="pool"  value="1"<?php if (1 == $result['pool']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Private pool</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers"  value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers"  value="1"<?php if (1 == $result['lawnSprinklers']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Lawn sprinklers</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="associationFee"  value="1"<?php if ($result['assocFee'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="associationFee"  value="1"<?php if (1 == $result['assocFee']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl">Association fee</span>
 																		</label>
 																		</div>
@@ -225,19 +229,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-1" class="col-xs-10 col-sm-6 date-picker" type="text" name="available" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-1" class="col-xs-10 col-sm-6 date-picker" type="text" name="available" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Price:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="price" class="col-xs-10 col-sm-6" type="text" name="price" placeholder="$" value="<?php echo $result['price'];?>">
+																			<input id="price" class="col-xs-10 col-sm-6" type="text" name="price" placeholder="$" value="<?php echo $result['price']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Fair market value</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="fmv" class="col-xs-10 col-sm-6" type="text" name="fmv" value="<?php echo $result['fmv'];?>">
+																			<input id="fmv" class="col-xs-10 col-sm-6" type="text" name="fmv" value="<?php echo $result['fmv']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -248,13 +252,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>MLS #</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="mls" class="col-xs-10 col-sm-6" type="text" name="mls" value="<?php echo $result['mls'];?>">
+																			<input id="mls" class="col-xs-10 col-sm-6" type="text" name="mls" value="<?php echo $result['mls']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Property taxes</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="tax" class="col-xs-10 col-sm-6" type="text" name="tax" placeholder="$" value="<?php echo $result['tax'];?>">
+																			<input id="tax" class="col-xs-10 col-sm-6" type="text" name="tax" placeholder="$" value="<?php echo $result['tax']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Sale Status:</label>
@@ -282,11 +286,11 @@ foreach ($state_val AS $key => $value) {
 																			<label>Lot Size:</label>
 																		</div>
 																		<div class="col-xs-5 col-sm-1">
-																			<input id="lotSize" class="col-xs-20 col-sm-10" type="text" name="lotSize" value="<?php echo $result['lotsize'];?>">
+																			<input id="lotSize" class="col-xs-20 col-sm-10" type="text" name="lotSize" value="<?php echo $result['lotsize']; ?>">
 																			</div>
 
 																			<div class="col-xs-5 col-sm-2">
-																			<select id="useAcreage" class="col-xs-20 col-sm-10"  name="useAcreage" value="<?php echo $result['useAcreage'];?>">
+																			<select id="useAcreage" class="col-xs-20 col-sm-10"  name="useAcreage" value="<?php echo $result['useAcreage']; ?>">
 																					<option value="1">Acres</option>
 																					<option selected="" value="0">Square Feet</option>
 																			</select>
@@ -295,13 +299,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Zoning:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="zoning" class="col-xs-10 col-sm-6" type="text" name="zoning" placeholder="" value="<?php echo $result['zoning'];?>">
+																			<input id="zoning" class="col-xs-10 col-sm-6" type="text" name="zoning" placeholder="" value="<?php echo $result['zoning']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Year Built</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="yearBuilt" class="col-xs-10 col-sm-6" type="text" name="yearBuilt" value="<?php echo $result['yearbuilt'];?>">
+																			<input id="yearBuilt" class="col-xs-10 col-sm-6" type="text" name="yearBuilt" value="<?php echo $result['yearbuilt']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -312,7 +316,7 @@ foreach ($state_val AS $key => $value) {
 																			<label># of parking spaces</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="parkingSpaces" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces" value="<?php echo $result['parkingSpaces'];?>">
+																			<input id="parkingSpaces" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces" value="<?php echo $result['parkingSpaces']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Garage size:</label>
@@ -335,7 +339,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Owner Financing Details</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="financingDetails" class="form-control"  name="financingDetails"><?php echo $result['financingDetails'];?></textarea>
+																			<textarea id="financingDetails" class="form-control"  name="financingDetails"><?php echo $result['financingDetails']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -353,7 +357,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="title" class="form-control"  name="title"><?php echo $result['title'];?></textarea>
+																			<textarea id="title" class="form-control"  name="title"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -365,7 +369,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_res" class="form-control"  name="description"><?php echo $result['description'];?></textarea>
+																			<textarea id="description_res" class="form-control"  name="description"><?php echo $result['description']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -385,23 +389,24 @@ foreach ($state_val AS $key => $value) {
 																	</div>
 																</div>
 														</div>
-														<?php } else {
-		?>
+														<?php
+    } else {
+        ?>
 															<div id="res_rent" style="display:block">
 															<div class="row">
-																<input type="hidden" name="id" value="<?php echo $result['resId'];?>">
+																<input type="hidden" name="id" value="<?php echo $result['resId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street) </label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1_rent" class="col-xs-15 col-sm-10" type="text" name="street1_rent" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1_rent" class="col-xs-15 col-sm-10" type="text" name="street1_rent" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 																	<div class="col-xs-6 col-sm-2">
 																		<label>Elementary School: </label>
 																	</div>
 																	<div class="col-xs-8 col-sm-3">
-																		<input id="elemSchool_rent" class="col-xs-10 col-sm-5" type="text" name="elemSchool_rent" size="25" maxlength="50" value="<?php echo $result['elemSchool'];?>">
+																		<input id="elemSchool_rent" class="col-xs-10 col-sm-5" type="text" name="elemSchool_rent" size="25" maxlength="50" value="<?php echo $result['elemSchool']; ?>">
 																	</div>
 																</div>
 																</div>
@@ -412,13 +417,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2_rent" class="col-xs-15 col-sm-10" type="text" name="street2_rent" size="25" maxlength="50" value="<?php echo $result['address2'];?>">
+																			<input id="street2_rent" class="col-xs-15 col-sm-10" type="text" name="street2_rent" size="25" maxlength="50" value="<?php echo $result['address2']; ?>">
 																		</div>
 																		<div class="col-xs-6 col-sm-2">
 																			<label>Middile School: </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="midSchool_rent" class="col-xs-10 col-sm-5" type="text" name="midSchool_rent" size="25" maxlength="50" value="<?php echo $result['midSchool'];?>">
+																			<input id="midSchool_rent" class="col-xs-10 col-sm-5" type="text" name="midSchool_rent" size="25" maxlength="50" value="<?php echo $result['midSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -430,8 +435,8 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property City:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="city_rent" name="city_rent" value="<?php echo $result['city'];?>">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="city_rent" name="city_rent" value="<?php echo $result['city']; ?>">
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -439,7 +444,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>High School: : </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="highSchool_rent" class="col-xs-10 col-sm-5" type="text" name="highSchool_rent" size="25" maxlength="50" value="<?php echo $result['highSchool'];?>">
+																			<input id="highSchool_rent" class="col-xs-10 col-sm-5" type="text" name="highSchool_rent" size="25" maxlength="50" value="<?php echo $result['highSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -450,13 +455,12 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property State:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="state_rent" name="state_rent"  value="<?php echo $result['state'];?>">
+																			<select class="col-xs-15 col-sm-10" id="state_rent" name="state_rent"  value="<?php echo $result['state']; ?>">
 																				<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-			echo "<option value='" . $key . "'>" . $value . "</option>";
-		}
-		?>
+foreach ($state_val as $key => $value) {
+            echo "<option value='".$key."'>".$value.'</option>';
+        } ?>
 																			</select>
 																		</div>
 
@@ -470,8 +474,8 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property Zip:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="zip_rent" name="zip_rent"  value="<?php echo $result['zip'];?>">
-																				<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="zip_rent" name="zip_rent"  value="<?php echo $result['zip']; ?>">
+																				<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 
 																			</select>
 																		</div>
@@ -479,7 +483,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Neighborhood Name:</label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="neighborhood_rent" class="col-xs-10 col-sm-5" type="text" name="neighborhood_rent" size="25" maxlength="50"  value="<?php echo $result['neighborhood'];?>">
+																			<input id="neighborhood_rent" class="col-xs-10 col-sm-5" type="text" name="neighborhood_rent" size="25" maxlength="50"  value="<?php echo $result['neighborhood']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -493,22 +497,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="tpGas_rent" id="tpGas_rent" value="1"<?php if ($result['tpgas'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="tpGas_rent" id="tpGas_rent" value="1"<?php if (1 == $result['tpgas']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tenant pays gas</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tpElectricity_rent" class="ace" type="checkbox" name="tpElectricity_rent"  value="1"<?php if ($result['tpelectricity'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpElectricity_rent" class="ace" type="checkbox" name="tpElectricity_rent"  value="1"<?php if (1 == $result['tpelectricity']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tenant pays electricity</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="tpWater_rent" class="ace" type="checkbox" name="tpWater_rent"  value="1"<?php if ($result['tpwater'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpWater_rent" class="ace" type="checkbox" name="tpWater_rent"  value="1"<?php if (1 == $result['tpwater']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tenant pays water</span>
 																		</label>
 																		</div>
@@ -520,22 +527,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="tpCable_rent" id="tpCable_rent" value="1"<?php if ($result['tpcable'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="tpCable_rent" id="tpCable_rent" value="1"<?php if (1 == $result['tpcable']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tenant pays cable</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tpTrash_rent" class="ace" type="checkbox" name="tpTrash_rent"  value="1"<?php if ($result['tptrash'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpTrash_rent" class="ace" type="checkbox" name="tpTrash_rent"  value="1"<?php if (1 == $result['tptrash']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tenant pays trash</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="pets_rent" class="ace" type="checkbox" name="pets_rent"  value="1"<?php if ($result['pets'] == 1) {echo 'checked';}
-		?>>
+																				<input id="pets_rent" class="ace" type="checkbox" name="pets_rent"  value="1"<?php if (1 == $result['pets']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Pets allowed</span>
 																		</label>
 																		</div>
@@ -547,22 +557,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="section8_rent" id="section8_rent" value="1"<?php if ($result['pets'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="section8_rent" id="section8_rent" value="1"<?php if (1 == $result['pets']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Section 8</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="fitness_rent" class="ace" type="checkbox" name="fitness_rent"  value="1"<?php if ($result['fitness'] == 1) {echo 'checked';}
-		?>>
+																				<input id="fitness_rent" class="ace" type="checkbox" name="fitness_rent"  value="1"<?php if (1 == $result['fitness']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Fitness center</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="spa_rent" class="ace" type="checkbox" name="spa_rent" value="1"<?php if ($result['spa'] == 1) {echo 'checked';}
-		?>>
+																				<input id="spa_rent" class="ace" type="checkbox" name="spa_rent" value="1"<?php if (1 == $result['spa']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Spa</span>
 																		</label>
 																		</div>
@@ -574,22 +587,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="sports_rent" id="sports_rent" value="1"<?php if ($result['sports'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="sports_rent" id="sports_rent" value="1"<?php if (1 == $result['sports']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Sports complex</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tennis_rent" class="ace" type="checkbox" name="tennis_rent"  value="1"<?php if ($result['tennis'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tennis_rent" class="ace" type="checkbox" name="tennis_rent"  value="1"<?php if (1 == $result['tennis']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Tennis</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="bikePath_rent" class="ace" type="checkbox" name="bikePath_rent"  value="1"<?php if ($result['bikePath'] == 1) {echo 'checked';}
-		?>>
+																				<input id="bikePath_rent" class="ace" type="checkbox" name="bikePath_rent"  value="1"<?php if (1 == $result['bikePath']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Bike Path</span>
 																		</label>
 																		</div>
@@ -601,22 +617,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="boating_rent" id="boating_rent" value="1"<?php if ($result['boating'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="boating_rent" id="boating_rent" value="1"<?php if (1 == $result['boating']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Boating</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="courtyard_rent" class="ace" type="checkbox" name="courtyard_rent" value="1"<?php if ($result['courtyard'] == 1) {echo 'checked';}
-		?>>
+																				<input id="courtyard_rent" class="ace" type="checkbox" name="courtyard_rent" value="1"<?php if (1 == $result['courtyard']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Courtyard</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="playground_rent" class="ace" type="checkbox" name="playground_rent"  value="1"<?php if ($result['playground'] == 1) {echo 'checked';}
-		?>>
+																				<input id="playground_rent" class="ace" type="checkbox" name="playground_rent"  value="1"<?php if (1 == $result['playground']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Playground</span>
 																		</label>
 																		</div>
@@ -628,22 +647,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="clubhouse_rent" id="clubhouse_rent" value="1"<?php if ($result['clubhouse'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="clubhouse_rent" id="clubhouse_rent" value="1"<?php if (1 == $result['clubhouse']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Clubhouse</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="publicTrans_rent" class="ace" type="checkbox" name="publicTrans_rent"  value="1"<?php if ($result['publicTrans'] == 1) {echo 'checked';}
-		?>>
+																				<input id="publicTrans_rent" class="ace" type="checkbox" name="publicTrans_rent"  value="1"<?php if (1 == $result['publicTrans']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Public transportation</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="waterfront_rent" class="ace" type="checkbox" name="waterfront_rent"  value="1"<?php if ($result['waterfront'] == 1) {echo 'checked';}
-		?>>
+																				<input id="waterfront_rent" class="ace" type="checkbox" name="waterfront_rent"  value="1"<?php if (1 == $result['waterfront']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Waterfront</span>
 																		</label>
 																		</div>
@@ -655,22 +677,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="golfCourse_rent" class="ace" type="checkbox" name="golfCourse_rent" value="1"<?php if ($result['golf'] == 1) {echo 'checked';}
-		?>>
+																				<input id="golfCourse_rent" class="ace" type="checkbox" name="golfCourse_rent" value="1"<?php if (1 == $result['golf']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Golf course</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="commPool_rent" id="commPool_rent"  value="1"<?php if ($result['commPool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="commPool_rent" id="commPool_rent"  value="1"<?php if (1 == $result['commPool']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Community pool</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers_rent" id="lawnSprinklers_rent" value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers_rent" id="lawnSprinklers_rent" value="1"<?php if (1 == $result['lawnSprinklers']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> lawn sprinklers</span>
 																		</label>
 																		</div>
@@ -682,22 +707,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="fenced_rent" class="ace" type="checkbox" name="fenced_rent" value="1"<?php if ($result['fenced'] == 1) {echo 'checked';}
-		?>>
+																				<input id="fenced_rent" class="ace" type="checkbox" name="fenced_rent" value="1"<?php if (1 == $result['fenced']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Fenced</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="pool_rent" id="pool_rent"  value="1"<?php if ($result['pool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="pool_rent" id="pool_rent"  value="1"<?php if (1 == $result['pool']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Private pool</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="associationFee_rent" id="associationFee_rent" value="1"<?php if ($result['assocFee'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="associationFee_rent" id="associationFee_rent" value="1"<?php if (1 == $result['assocFee']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Association fee</span>
 																		</label>
 																		</div>
@@ -709,15 +737,17 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="groundLease_rent" id="groundLease_rent"  value="1"<?php if ($result['groundLease'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="groundLease_rent" id="groundLease_rent"  value="1"<?php if (1 == $result['groundLease']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Ground Lease</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="leaseOp_rent" id="leaseOp_rent"  value="1"<?php if ($result['leaseOp'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="leaseOp_rent" id="leaseOp_rent"  value="1"<?php if (1 == $result['leaseOp']) {
+            echo 'checked';
+        } ?>>
 																				<span class="lbl"> Lease Option</span>
 																			</label>
 																		</div>
@@ -725,7 +755,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-3" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-3" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 
 																	</div>
@@ -737,7 +767,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Building Size</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="sqFeet_rent" class="col-xs-10 col-sm-6" type="text" name="sqFeet_rent" value="<?php echo $result['sqFeet'];?>">
+																			<input id="sqFeet_rent" class="col-xs-10 col-sm-6" type="text" name="sqFeet_rent" value="<?php echo $result['sqFeet']; ?>">
 																			 ft.
 																			<span class="super">2</span>
 																		</div>
@@ -745,13 +775,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Application fee</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="appFee_rent" class="col-xs-10 col-sm-6" type="text" name="appFee_rent" placeholder="$" value="<?php echo $result['appFee'];?>">
+																			<input id="appFee_rent" class="col-xs-10 col-sm-6" type="text" name="appFee_rent" placeholder="$" value="<?php echo $result['appFee']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Security Deposit</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="deposit_rent" class="col-xs-10 col-sm-6" type="text" name="deposit_rent" placeholder="$" value="<?php echo $result['secdep'];?>">
+																			<input id="deposit_rent" class="col-xs-10 col-sm-6" type="text" name="deposit_rent" placeholder="$" value="<?php echo $result['secdep']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -762,7 +792,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Lot Size:</label>
 																		</div>
 																		<div class="col-xs-5 col-sm-1">
-																			<input id="lotSize_rent" class="col-xs-20 col-sm-10" type="text" name="lotSize_rent" value="<?php echo $result['lotsize'];?>">
+																			<input id="lotSize_rent" class="col-xs-20 col-sm-10" type="text" name="lotSize_rent" value="<?php echo $result['lotsize']; ?>">
 																		</div>
 
 																			<div class="col-xs-5 col-sm-2">
@@ -775,13 +805,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Zoning:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="zoning_rent" class="col-xs-10 col-sm-6" type="text" name="zoning_rent" placeholder="" value="<?php echo $result['zoning'];?>">
+																			<input id="zoning_rent" class="col-xs-10 col-sm-6" type="text" name="zoning_rent" placeholder="" value="<?php echo $result['zoning']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Year Built</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="yearBuilt_rent" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_rent" value="<?php echo $result['yearbuilt'];?>">
+																			<input id="yearBuilt_rent" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_rent" value="<?php echo $result['yearbuilt']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -792,7 +822,7 @@ foreach ($state_val AS $key => $value) {
 																			<label># of parking spaces</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="parkingSpaces_rent" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_rent" value="<?php echo $result['parkingSpaces'];?>">
+																			<input id="parkingSpaces_rent" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_rent" value="<?php echo $result['parkingSpaces']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Garage size:</label>
@@ -815,7 +845,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Pet Policy (if applicable)</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="petPolicy_rent" class="form-control"  name="petPolicy_rent"><?php echo $result['petPolicy'];?></textarea>
+																			<textarea id="petPolicy_rent" class="form-control"  name="petPolicy_rent"><?php echo $result['petPolicy']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -832,7 +862,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea class="form-control"  name="title_rent" id="title_rent"><?php echo $result['title'];?></textarea>
+																			<textarea class="form-control"  name="title_rent" id="title_rent"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -844,7 +874,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_rent" class="form-control"  name="description_rent"><?php echo $result['description'];?></textarea>
+																			<textarea id="description_rent" class="form-control"  name="description_rent"><?php echo $result['description']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -864,26 +894,27 @@ foreach ($state_val AS $key => $value) {
 																	</div>
 																</div>
 														</div>
-															<?php }
-	?>
-															 <?php } else if ($result['typeId'] == 57 || $result['typeId'] == 56 || $result['typeId'] == 67) {
-	if ($result['forSale'] == 1) {
-		?>
+															<?php
+    } ?>
+															 <?php
+} elseif (57 == $result['typeId'] || 56 == $result['typeId'] || 67 == $result['typeId']) {
+        if (1 == $result['forSale']) {
+            ?>
 															<div id="com_sale_diff" style="display:block">
 													<div class="row">
-																<input type="hidden" name="id" value="<?php echo $result['resId'];?>">
+																<input type="hidden" name="id" value="<?php echo $result['resId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street)</label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1_diff" class="col-xs-15 col-sm-10" type="text" name="street1_diff" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1_diff" class="col-xs-15 col-sm-10" type="text" name="street1_diff" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 																	<div class="col-xs-6 col-sm-2">
 																		<label>Elementary School: </label>
 																	</div>
 																	<div class="col-xs-8 col-sm-3">
-																		<input id="elemSchool_diff" class="col-xs-10 col-sm-5" type="text" name="elemSchool_diff" size="25" maxlength="50" value="<?php echo $result['elemSchool'];?>">
+																		<input id="elemSchool_diff" class="col-xs-10 col-sm-5" type="text" name="elemSchool_diff" size="25" maxlength="50" value="<?php echo $result['elemSchool']; ?>">
 																	</div>
 																</div>
 																</div>
@@ -894,13 +925,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2_diff" class="col-xs-15 col-sm-10" type="text" name="street2_diff" size="25" maxlength="50" value="<?php echo $result['address2'];?>">
+																			<input id="street2_diff" class="col-xs-15 col-sm-10" type="text" name="street2_diff" size="25" maxlength="50" value="<?php echo $result['address2']; ?>">
 																		</div>
 																		<div class="col-xs-6 col-sm-2">
 																			<label>Middile School: </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="midSchool_diff" class="col-xs-10 col-sm-5" type="text" name="midSchool_diff" size="25" maxlength="50" value="<?php echo $result['midSchool'];?>">
+																			<input id="midSchool_diff" class="col-xs-10 col-sm-5" type="text" name="midSchool_diff" size="25" maxlength="50" value="<?php echo $result['midSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -912,8 +943,8 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property City:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="city_diff" name="city_diff" value="<?php echo $result['city'];?>">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="city_diff" name="city_diff" value="<?php echo $result['city']; ?>">
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -921,7 +952,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>High School: : </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="highSchool_diff" class="col-xs-10 col-sm-5" type="text" name="highSchool_diff" size="25" maxlength="50" value="<?php echo $result['highSchool'];?>">
+																			<input id="highSchool_diff" class="col-xs-10 col-sm-5" type="text" name="highSchool_diff" size="25" maxlength="50" value="<?php echo $result['highSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -932,13 +963,12 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property State:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="state_diff" name="state_diff" value="<?php echo $result['state'];?>">
+																			<select class="col-xs-15 col-sm-10" id="state_diff" name="state_diff" value="<?php echo $result['state']; ?>">
 																				<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-			echo "<option value='" . $key . "'>" . $value . "</option>";
-		}
-		?>
+foreach ($state_val as $key => $value) {
+                echo "<option value='".$key."'>".$value.'</option>';
+            } ?>
 																			</select>
 																		</div>
 
@@ -952,8 +982,8 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property Zip:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="zip_diff" name="zip_diff" value="<?php echo $result['zip'];?>">
-																				<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="zip_diff" name="zip_diff" value="<?php echo $result['zip']; ?>">
+																				<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 
 																			</select>
 																		</div>
@@ -961,7 +991,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Neighborhood Name:</label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="neighborhood_diff" class="col-xs-10 col-sm-5" type="text" name="neighborhood_diff" size="25" maxlength="50" value="<?php echo $result['neighborhood'];?>">
+																			<input id="neighborhood_diff" class="col-xs-10 col-sm-5" type="text" name="neighborhood_diff" size="25" maxlength="50" value="<?php echo $result['neighborhood']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -975,22 +1005,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="waterfront_diff" id="waterfront_diff" value="1"<?php if ($result['waterfront'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="waterfront_diff" id="waterfront_diff" value="1"<?php if (1 == $result['waterfront']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Waterfront</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="golfCourse_diff"  value="1"<?php if ($result['golf'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="golfCourse_diff"  value="1"<?php if (1 == $result['golf']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Golf course</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="commPool_diff"  value="1"<?php if ($result['commPool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="commPool_diff"  value="1"<?php if (1 == $result['commPool']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Community pool</span>
 																		</label>
 																		</div>
@@ -1003,22 +1036,25 @@ foreach ($state_val AS $key => $value) {
 
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers_diff"  value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers_diff"  value="1"<?php if (1 == $result['lawnSprinklers']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Lawn sprinklers</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="laundry_diff"  value="1"<?php if ($result['onSiteLaundry'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="laundry_diff"  value="1"<?php if (1 == $result['onSiteLaundry']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> On-site laundry</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="gated_diff" value="1"<?php if ($result['gated'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="gated_diff" value="1"<?php if (1 == $result['gated']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl">Gated community</span>
 																		</label>
 																		</div>
@@ -1032,7 +1068,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-6" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_diff" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-6" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_diff" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Sale Status:</label>
@@ -1055,7 +1091,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Price:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="price_diff" class="col-xs-10 col-sm-6" type="text" name="price_diff" placeholder="$" value="<?php echo $result['price'];?>">
+																			<input id="price_diff" class="col-xs-10 col-sm-6" type="text" name="price_diff" placeholder="$" value="<?php echo $result['price']; ?>">
 																		</div>
 
 																	</div>
@@ -1067,19 +1103,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Number of units:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="numUnits_diff" class="col-xs-10 col-sm-6" type="text" name="numUnits_diff" value="<?php echo $result['numUnits'];?>">
+																			<input id="numUnits_diff" class="col-xs-10 col-sm-6" type="text" name="numUnits_diff" value="<?php echo $result['numUnits']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Office email address</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="email_diff" class="col-xs-10 col-sm-6" type="text" name="email_diff" value="<?php echo $result['email'];?>">
+																			<input id="email_diff" class="col-xs-10 col-sm-6" type="text" name="email_diff" value="<?php echo $result['email']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Phone number</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="phone_diff" class="col-xs-10 col-sm-6" type="text" name="phone_diff" value="<?php echo $result['phone'];?>">
+																			<input id="phone_diff" class="col-xs-10 col-sm-6" type="text" name="phone_diff" value="<?php echo $result['phone']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1090,19 +1126,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Fax</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="fax_diff" class="col-xs-10 col-sm-6" type="text" name="fax_diff" value="<?php echo $result['fax'];?>">
+																			<input id="fax_diff" class="col-xs-10 col-sm-6" type="text" name="fax_diff" value="<?php echo $result['fax']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Fair market value</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="fmv_diff" class="col-xs-10 col-sm-6" type="text" name="fmv_diff" placeholder="$" value="<?php echo $result['fmv'];?>">
+																			<input id="fmv_diff" class="col-xs-10 col-sm-6" type="text" name="fmv_diff" placeholder="$" value="<?php echo $result['fmv']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>MLS#</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="mls_diff" class="col-xs-10 col-sm-6" type="text" name="mls_diff" value="<?php echo $result['mls'];?>">
+																			<input id="mls_diff" class="col-xs-10 col-sm-6" type="text" name="mls_diff" value="<?php echo $result['mls']; ?>">
 																		</div>
 
 																	</div>
@@ -1114,19 +1150,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Net Operating Income:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="noi_diff" class="col-xs-10 col-sm-6" type="text" name="noi_diff" placeholder="$" value="<?php echo $result['noi'];?>">
+																			<input id="noi_diff" class="col-xs-10 col-sm-6" type="text" name="noi_diff" placeholder="$" value="<?php echo $result['noi']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Gross Operating Income:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="goi_diff" class="col-xs-10 col-sm-6" type="text" name="goi_diff" value="<?php echo $result['goi'];?>">
+																			<input id="goi_diff" class="col-xs-10 col-sm-6" type="text" name="goi_diff" value="<?php echo $result['goi']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Occupancy Rate:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="occupancy_diff" class="col-xs-10 col-sm-6" type="text" name="occupancy_diff" placeholder="%" value="<?php echo $result['occupancy'];?>">
+																			<input id="occupancy_diff" class="col-xs-10 col-sm-6" type="text" name="occupancy_diff" placeholder="%" value="<?php echo $result['occupancy']; ?>">
 																		</div>
 
 																	</div>
@@ -1138,19 +1174,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Operating Expenses:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="opExpenses_diff" class="col-xs-10 col-sm-6" type="text" name="opExpenses_diff" maxlength="13" value="<?php echo $result['opExpenses'];?>">
+																			<input id="opExpenses_diff" class="col-xs-10 col-sm-6" type="text" name="opExpenses_diff" maxlength="13" value="<?php echo $result['opExpenses']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Year built</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="yearBuilt_diff" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_diff" maxlength="4" value="<?php echo $result['yearbuilt'];?>">
+																			<input id="yearBuilt_diff" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_diff" maxlength="4" value="<?php echo $result['yearbuilt']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label># of parking spaces</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="parkingSpaces_diff" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_diff" maxlength="6" value="<?php echo $result['parkingSpaces'];?>">
+																			<input id="parkingSpaces_diff" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_diff" maxlength="6" value="<?php echo $result['parkingSpaces']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1186,7 +1222,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="title_diff" class="form-control"  name="title_diff" maxlength="25"><?php echo $result['title'];?></textarea>
+																			<textarea id="title_diff" class="form-control"  name="title_diff" maxlength="25"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -1198,7 +1234,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_diff" class="form-control"  name="description_diff"><?php echo $result['description'];?></textarea>
+																			<textarea id="description_diff" class="form-control"  name="description_diff"><?php echo $result['description']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -1219,23 +1255,24 @@ foreach ($state_val AS $key => $value) {
 
 														</div>
 														</div>
-														<?php } else {
-		?>
+														<?php
+        } else {
+            ?>
 														<div id="com_rent_diff" style="display:block">
 															<div class="row">
-																<input type="hidden" name="id" value="<?php echo $result['resId'];?>">
+																<input type="hidden" name="id" value="<?php echo $result['resId']; ?>">
 																<div class="form-group">
 																	<div class="col-xs-9 col-sm-3">
 																		<label>Property Address: (Ex: 123 Main Street)</label>
 																	</div>
 																	<div class="col-xs-10 col-sm-4">
-																		<input id="street1_rent_diff" class="col-xs-15 col-sm-10" type="text" name="street1_rent_diff" size="25" maxlength="50" value="<?php echo $result['address'];?>">
+																		<input id="street1_rent_diff" class="col-xs-15 col-sm-10" type="text" name="street1_rent_diff" size="25" maxlength="50" value="<?php echo $result['address']; ?>">
 																	</div>
 																	<div class="col-xs-6 col-sm-2">
 																		<label>Elementary School: </label>
 																	</div>
 																	<div class="col-xs-8 col-sm-3">
-																		<input id="elemSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="elemSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['elemSchool'];?>">
+																		<input id="elemSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="elemSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['elemSchool']; ?>">
 																	</div>
 																</div>
 																</div>
@@ -1246,13 +1283,13 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property Address2:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<input id="street2_rent_diff" class="col-xs-15 col-sm-10" type="text" name="street2_rent_diff" size="25" maxlength="50"  value="<?php echo $result['address2'];?>">
+																			<input id="street2_rent_diff" class="col-xs-15 col-sm-10" type="text" name="street2_rent_diff" size="25" maxlength="50"  value="<?php echo $result['address2']; ?>">
 																		</div>
 																		<div class="col-xs-6 col-sm-2">
 																			<label>Middile School: </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="midSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="midSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['midSchool'];?>">
+																			<input id="midSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="midSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['midSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1264,8 +1301,8 @@ foreach ($state_val AS $key => $value) {
 																			<label>Property City:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<select class="col-xs-15 col-sm-10" id="city_rent_diff" name="city_rent_diff" value="<?php echo $result['city'];?>">
-																				<option value="<?php echo $result['city'];?>" selected><?php echo $result['city'];?></option>
+																			<select class="col-xs-15 col-sm-10" id="city_rent_diff" name="city_rent_diff" value="<?php echo $result['city']; ?>">
+																				<option value="<?php echo $result['city']; ?>" selected><?php echo $result['city']; ?></option>
 
 																			</select>
 																		</div>
@@ -1273,7 +1310,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>High School: : </label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="highSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="highSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['highSchool'];?>">
+																			<input id="highSchool_rent_diff" class="col-xs-10 col-sm-5" type="text" name="highSchool_rent_diff" size="25" maxlength="50" value="<?php echo $result['highSchool']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1287,10 +1324,9 @@ foreach ($state_val AS $key => $value) {
 																			<select class="col-xs-15 col-sm-10" id="state_rent_diff" name="state_rent_diff">
 																				<option value="">&nbsp</option>
 																			<?php
-foreach ($state_val AS $key => $value) {
-			echo "<option value='" . $key . "'>" . $value . "</option>";
-		}
-		?>
+foreach ($state_val as $key => $value) {
+                echo "<option value='".$key."'>".$value.'</option>';
+            } ?>
 																			</select>
 																		</div>
 
@@ -1305,7 +1341,7 @@ foreach ($state_val AS $key => $value) {
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<select class="col-xs-15 col-sm-10" id="zip_rent_diff" name="zip_rent_diff">
-																				<option value="<?php echo $result['zip'];?>" selected><?php echo $result['zip'];?></option>
+																				<option value="<?php echo $result['zip']; ?>" selected><?php echo $result['zip']; ?></option>
 
 																			</select>
 																		</div>
@@ -1313,7 +1349,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Neighborhood Name:</label>
 																		</div>
 																		<div class="col-xs-8 col-sm-3">
-																			<input id="neighborhood_rent_diff" class="col-xs-10 col-sm-5" type="text" name="neighborhood_rent_diff" size="25" maxlength="50" alue="<?php echo $result['neighborhood'];?>">
+																			<input id="neighborhood_rent_diff" class="col-xs-10 col-sm-5" type="text" name="neighborhood_rent_diff" size="25" maxlength="50" alue="<?php echo $result['neighborhood']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1327,22 +1363,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="tpGas_rent_diff" id="tpGas_rent_diff" value="1"<?php if ($result['tpgas'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="tpGas_rent_diff" id="tpGas_rent_diff" value="1"<?php if (1 == $result['tpgas']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tenant pays gas</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tpElectricity_rent_diff" class="ace" type="checkbox" name="tpElectricity_rent_diff"  value="1"<?php if ($result['tpelectricity'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpElectricity_rent_diff" class="ace" type="checkbox" name="tpElectricity_rent_diff"  value="1"<?php if (1 == $result['tpelectricity']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tenant pays electricity</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="tpWater_rent_diff" class="ace" type="checkbox" name="tpWater_rent_diff"  value="1"<?php if ($result['tpwater'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpWater_rent_diff" class="ace" type="checkbox" name="tpWater_rent_diff"  value="1"<?php if (1 == $result['tpwater']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tenant pays water</span>
 																		</label>
 																		</div>
@@ -1354,22 +1393,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="tpCable_rent_diff" id="tpCable_rent_diff" value="1"<?php if ($result['tpcable'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="tpCable_rent_diff" id="tpCable_rent_diff" value="1"<?php if (1 == $result['tpcable']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tenant pays cable</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tpTrash_rent_diff" class="ace" type="checkbox" name="tpTrash_rent_diff"  value="1"<?php if ($result['tptrash'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tpTrash_rent_diff" class="ace" type="checkbox" name="tpTrash_rent_diff"  value="1"<?php if (1 == $result['tptrash']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tenant pays trash</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="pets_rent_diff" class="ace" type="checkbox" name="pets_rent_diff"  value="1"<?php if ($result['pets'] == 1) {echo 'checked';}
-		?>>
+																				<input id="pets_rent_diff" class="ace" type="checkbox" name="pets_rent_diff"  value="1"<?php if (1 == $result['pets']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Pets allowed</span>
 																		</label>
 																		</div>
@@ -1381,22 +1423,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="section8_rent_diff" id="section8_rent_diff"  value="1"<?php if ($result['pets'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="section8_rent_diff" id="section8_rent_diff"  value="1"<?php if (1 == $result['pets']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Section 8</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="fitness_rent_diff" class="ace" type="checkbox" name="fitness_rent_diff"  value="1"<?php if ($result['fitness'] == 1) {echo 'checked';}
-		?>>
+																				<input id="fitness_rent_diff" class="ace" type="checkbox" name="fitness_rent_diff"  value="1"<?php if (1 == $result['fitness']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Fitness center</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="spa_rent_diff" class="ace" type="checkbox" name="spa_rent_diff"  value="1"<?php if ($result['spa'] == 1) {echo 'checked';}
-		?>>
+																				<input id="spa_rent_diff" class="ace" type="checkbox" name="spa_rent_diff"  value="1"<?php if (1 == $result['spa']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Spa</span>
 																		</label>
 																		</div>
@@ -1408,22 +1453,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="sports_rent_diff" id="sports_rent_diff" value="1"<?php if ($result['sports'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="sports_rent_diff" id="sports_rent_diff" value="1"<?php if (1 == $result['sports']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Sports complex</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="tennis_rent_diff" class="ace" type="checkbox" name="tennis_rent_diff"  value="1"<?php if ($result['tennis'] == 1) {echo 'checked';}
-		?>>
+																				<input id="tennis_rent_diff" class="ace" type="checkbox" name="tennis_rent_diff"  value="1"<?php if (1 == $result['tennis']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Tennis</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="bikePath_rent_diff" class="ace" type="checkbox" name="bikePath_rent_diff"  value="1"<?php if ($result['bikePath'] == 1) {echo 'checked';}
-		?>>
+																				<input id="bikePath_rent_diff" class="ace" type="checkbox" name="bikePath_rent_diff"  value="1"<?php if (1 == $result['bikePath']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Bike Path</span>
 																		</label>
 																		</div>
@@ -1435,22 +1483,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="boating_rent_diff" id="boating_rent_diff" value="1"<?php if ($result['boating'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="boating_rent_diff" id="boating_rent_diff" value="1"<?php if (1 == $result['boating']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Boating</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="courtyard_rent_diff" class="ace" type="checkbox" name="courtyard_rent_diff"  value="1"<?php if ($result['courtyard'] == 1) {echo 'checked';}
-		?>>
+																				<input id="courtyard_rent_diff" class="ace" type="checkbox" name="courtyard_rent_diff"  value="1"<?php if (1 == $result['courtyard']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Courtyard</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="playground_rent_diff" class="ace" type="checkbox" name="playground_rent_diff"   value="1"<?php if ($result['playground'] == 1) {echo 'checked';}
-		?>>
+																				<input id="playground_rent_diff" class="ace" type="checkbox" name="playground_rent_diff"   value="1"<?php if (1 == $result['playground']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Playground</span>
 																		</label>
 																		</div>
@@ -1462,22 +1513,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="clubhouse_rent_diff" id="clubhouse_rent_diff"  value="1"<?php if ($result['clubhouse'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="clubhouse_rent_diff" id="clubhouse_rent_diff"  value="1"<?php if (1 == $result['clubhouse']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Clubhouse</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="publicTrans_rent_diff" class="ace" type="checkbox" name="publicTrans_rent_diff"  value="1"<?php if ($result['publicTrans'] == 1) {echo 'checked';}
-		?>>
+																				<input id="publicTrans_rent_diff" class="ace" type="checkbox" name="publicTrans_rent_diff"  value="1"<?php if (1 == $result['publicTrans']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Public transportation</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input id="waterfront_rent_diff" class="ace" type="checkbox" name="waterfront_rent_diff"  value="1"<?php if ($result['waterfront'] == 1) {echo 'checked';}
-		?>>
+																				<input id="waterfront_rent_diff" class="ace" type="checkbox" name="waterfront_rent_diff"  value="1"<?php if (1 == $result['waterfront']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Waterfront</span>
 																		</label>
 																		</div>
@@ -1489,22 +1543,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="golfCourse_rent_diff" class="ace" type="checkbox" name="golfCourse_rent_diff" value="1"<?php if ($result['golf'] == 1) {echo 'checked';}
-		?>>
+																				<input id="golfCourse_rent_diff" class="ace" type="checkbox" name="golfCourse_rent_diff" value="1"<?php if (1 == $result['golf']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Golf course</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="commPool_rent_diff" id="commPool_rent_diff"  value="1"<?php if ($result['commPool'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="commPool_rent_diff" id="commPool_rent_diff"  value="1"<?php if (1 == $result['commPool']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Community pool</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="lawnSprinklers_rent_diff" id="lawnSprinklers_rent_diff"  value="1"<?php if ($result['lawnSprinklers'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="lawnSprinklers_rent_diff" id="lawnSprinklers_rent_diff"  value="1"<?php if (1 == $result['lawnSprinklers']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> lawn sprinklers</span>
 																		</label>
 																		</div>
@@ -1516,22 +1573,25 @@ foreach ($state_val AS $key => $value) {
 																	<div class="form-group">
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input id="fenced_rent_diff" class="ace" type="checkbox" name="fenced_rent_diff" value="1"<?php if ($result['fenced'] == 1) {echo 'checked';}
-		?>>
+																				<input id="fenced_rent_diff" class="ace" type="checkbox" name="fenced_rent_diff" value="1"<?php if (1 == $result['fenced']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Fenced</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																			<label>
-																				<input class="ace" type="checkbox" name="laundry_rent_diff" id="laundry_rent_diff"   value="1"<?php if ($result['onSiteLaundry'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="laundry_rent_diff" id="laundry_rent_diff"   value="1"<?php if (1 == $result['onSiteLaundry']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> On-site laundry</span>
 																			</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
 																		<label>
-																				<input class="ace" type="checkbox" name="gated_rent_diff" id="gated_rent_diff" value="1"<?php if ($result['gated'] == 1) {echo 'checked';}
-		?>>
+																				<input class="ace" type="checkbox" name="gated_rent_diff" id="gated_rent_diff" value="1"<?php if (1 == $result['gated']) {
+                echo 'checked';
+            } ?>>
 																				<span class="lbl"> Gated community</span>
 																		</label>
 																		</div>
@@ -1545,19 +1605,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Available:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="id-date-picker-7" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent_diff" data-date-format="yyyy-mm-dd" value="<?php echo $result['available'];?>">
+																			<input id="id-date-picker-7" class="col-xs-10 col-sm-6 date-picker" type="text" name="available_rent_diff" data-date-format="yyyy-mm-dd" value="<?php echo $result['available']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Number of units:</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="numUnits_rent_diff" class="col-xs-10 col-sm-6" type="text" name="numUnits_rent_diff" placeholder="" value="<?php echo $result['numUnits'];?>">
+																			<input id="numUnits_rent_diff" class="col-xs-10 col-sm-6" type="text" name="numUnits_rent_diff" placeholder="" value="<?php echo $result['numUnits']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Apartment slogan</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="aptSlogan_rent_diff" class="col-xs-10 col-sm-6" type="text" name="aptSlogan_rent_diff" placeholder="" value="<?php echo $result['slogan'];?>">
+																			<input id="aptSlogan_rent_diff" class="col-xs-10 col-sm-6" type="text" name="aptSlogan_rent_diff" placeholder="" value="<?php echo $result['slogan']; ?>">
 																		</div>
 
 																	</div>
@@ -1569,19 +1629,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Office email address</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="email_rent_diff" class="col-xs-10 col-sm-6" type="text" name="email_rent_diff" value="<?php echo $result['email'];?>">
+																			<input id="email_rent_diff" class="col-xs-10 col-sm-6" type="text" name="email_rent_diff" value="<?php echo $result['email']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Phone number</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="phone_rent_diff" class="col-xs-10 col-sm-6" type="text" name="phone_rent_diff" placeholder=""  value="<?php echo $result['phone'];?>">
+																			<input id="phone_rent_diff" class="col-xs-10 col-sm-6" type="text" name="phone_rent_diff" placeholder=""  value="<?php echo $result['phone']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Fax</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="fax_rent_diff" class="col-xs-10 col-sm-6" type="text" name="fax_rent_diff" placeholder=""  value="<?php echo $result['fax'];?>">
+																			<input id="fax_rent_diff" class="col-xs-10 col-sm-6" type="text" name="fax_rent_diff" placeholder=""  value="<?php echo $result['fax']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1592,19 +1652,19 @@ foreach ($state_val AS $key => $value) {
 																			<label>Application fee</label>
 																		</div>
 																		<div class="col-xs-5 col-sm-3">
-																			<input id="appFee_rent_diff" class="col-xs-20 col-sm-6" type="text" name="appFee_rent_diff" placeholder="$"  value="<?php echo $result['appFee'];?>">
+																			<input id="appFee_rent_diff" class="col-xs-20 col-sm-6" type="text" name="appFee_rent_diff" placeholder="$"  value="<?php echo $result['appFee']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Security Deposite</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="deposit_rent_diff" class="col-xs-10 col-sm-6" type="text" name="deposit_rent_diff" placeholder="$" value="<?php echo $result['secdep'];?>">
+																			<input id="deposit_rent_diff" class="col-xs-10 col-sm-6" type="text" name="deposit_rent_diff" placeholder="$" value="<?php echo $result['secdep']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Year Built</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="yearBuilt_rent_diff" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_rent_diff" value="<?php echo $result['yearbuilt'];?>">
+																			<input id="yearBuilt_rent_diff" class="col-xs-10 col-sm-6" type="text" name="yearBuilt_rent_diff" value="<?php echo $result['yearbuilt']; ?>">
 																		</div>
 																	</div>
 																</div>
@@ -1615,7 +1675,7 @@ foreach ($state_val AS $key => $value) {
 																			<label># of parking spaces</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-3">
-																			<input id="parkingSpaces_rent_diff" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_rent_diff" value="<?php echo $result['parkingSpaces'];?>">
+																			<input id="parkingSpaces_rent_diff" class="col-xs-10 col-sm-6" type="text" name="parkingSpaces_rent_diff" value="<?php echo $result['parkingSpaces']; ?>">
 																		</div>
 																		<div class="col-xs-4 col-sm-1">
 																			<label>Garage size:</label>
@@ -1645,7 +1705,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Title</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea class="form-control"  name="title_rent_diff" id="title_rent_diff"><?php echo $result['title'];?></textarea>
+																			<textarea class="form-control"  name="title_rent_diff" id="title_rent_diff"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -1657,7 +1717,7 @@ foreach ($state_val AS $key => $value) {
 																			<label>Description (500 character maximum) This is how people will find your property through our text searches. More content within your description means more chances your property will show up, so please use the space provided.</label>
 																		</div>
 																		<div class="col-xs-10 col-sm-4">
-																			<textarea id="description_rent_diff" class="form-control"  name="description_rent_diff"><?php echo $result['title'];?></textarea>
+																			<textarea id="description_rent_diff" class="form-control"  name="description_rent_diff"><?php echo $result['title']; ?></textarea>
 																		</div>
 																		</div>
 																		</div>
@@ -1679,8 +1739,9 @@ foreach ($state_val AS $key => $value) {
 														</div>
 														</div>
 
-														<?php }
-}
+														<?php
+        }
+    }
 ?>
 
 
@@ -1781,7 +1842,7 @@ foreach ($state_val AS $key => $value) {
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo base_url();?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -1793,25 +1854,25 @@ foreach ($state_val AS $key => $value) {
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='<?php echo base_url();?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo base_url(); ?>assets1/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="<?php echo base_url();?>assets1/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.validate.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/additional-methods.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/bootbox.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/select2.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
-		<!-- <script src="<?php echo base_url();?>assets1/js/dropzone.min.js"></script> -->
+		<script src="<?php echo base_url(); ?>assets1/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.validate.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/additional-methods.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/bootbox.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/select2.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/date-time/bootstrap-datepicker.min.js"></script>
+		<!-- <script src="<?php echo base_url(); ?>assets1/js/dropzone.min.js"></script> -->
 		<!-- ace scripts -->
 
-		<script src="<?php echo base_url();?>assets1/js/ace-elements.min.js"></script>
-		<script src="<?php echo base_url();?>assets1/js/ace.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace-elements.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets1/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -1834,10 +1895,10 @@ foreach ($state_val AS $key => $value) {
 					$("#com_sale_diff").hide();
 					$("#com_rent_diff").hide();
 					$("#res_sale").show();
-					$("#status").val('<?php echo $result["status"];?>');
-				/*	$("#useAcreage").val('<?php echo $result["useacreage"];?>');*/
-					$("#garageSize").val('<?php echo $result["garagesize"];?>');
-					$('#state').val('<?php echo $result["state"];?>');
+					$("#status").val('<?php echo $result['status']; ?>');
+				/*	$("#useAcreage").val('<?php echo $result['useacreage']; ?>');*/
+					$("#garageSize").val('<?php echo $result['garagesize']; ?>');
+					$('#state').val('<?php echo $result['state']; ?>');
 
 
 				}else{
@@ -1845,8 +1906,8 @@ foreach ($state_val AS $key => $value) {
 					$("#com_sale_diff").hide();
 					$("#com_rent_diff").hide();
 					$("#res_sale").hide();
-					$("#garageSize_rent").val('<?php echo $result["garagesize"];?>');
-					$('#state_rent').val('<?php echo $result["state"];?>');
+					$("#garageSize_rent").val('<?php echo $result['garagesize']; ?>');
+					$('#state_rent').val('<?php echo $result['state']; ?>');
 				}
 			}else {
 				if(for_sale == 1){
@@ -1854,17 +1915,17 @@ foreach ($state_val AS $key => $value) {
 					$("#com_sale_diff").show();
 					$("#com_rent_diff").hide();
 					$("#res_sale").hide();
-					$("#status_diff").val('<?php echo $result["status"];?>');
-					$("#garageSize_diff").val('<?php echo $result["garagesize"];?>');
-					$('#state_diff').val('<?php echo $result["state"];?>');
+					$("#status_diff").val('<?php echo $result['status']; ?>');
+					$("#garageSize_diff").val('<?php echo $result['garagesize']; ?>');
+					$('#state_diff').val('<?php echo $result['state']; ?>');
 
 				}else{
 					$("#res_rent").hide();
 					$("#com_sale_diff").hide();
 					$("#com_rent_diff").show();
 					$("#res_sale").hide();
-					$("#garageSize_rent_diff").val('<?php echo $result["garagesize"];?>');
-					$('#state_rent_diff').val('<?php echo $result["state"];?>');
+					$("#garageSize_rent_diff").val('<?php echo $result['garagesize']; ?>');
+					$('#state_rent_diff').val('<?php echo $result['state']; ?>');
 				}
 
 			}
@@ -1875,7 +1936,7 @@ foreach ($state_val AS $key => $value) {
 							var state_id = $('#state_diff').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -1896,7 +1957,7 @@ foreach ($state_val AS $key => $value) {
 								var city_id = $('#city_diff').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -1916,7 +1977,7 @@ foreach ($state_val AS $key => $value) {
 							var state_id = $('#state_rent_diff').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -1937,7 +1998,7 @@ foreach ($state_val AS $key => $value) {
 								var city_id = $('#city_rent_diff').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -1957,7 +2018,7 @@ foreach ($state_val AS $key => $value) {
 							var state_id = $('#state').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -1978,7 +2039,7 @@ foreach ($state_val AS $key => $value) {
 								var city_id = $('#city').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",
@@ -1998,7 +2059,7 @@ foreach ($state_val AS $key => $value) {
 							var state_id = $('#state_rent').val();
 							           	$.ajax({
 									        type: 'POST',
-									        url: "<?php echo base_url();?>admin/getStates",
+									        url: "<?php echo base_url(); ?>admin/getStates",
 									        cache: false,
 									        data:'state_id='+state_id,
 									        dataType: "json",
@@ -2019,7 +2080,7 @@ foreach ($state_val AS $key => $value) {
 								var city_id = $('#city_rent').val();
 								           	$.ajax({
 										        type: 'POST',
-										        url: "<?php echo base_url();?>admin/getZip",
+										        url: "<?php echo base_url(); ?>admin/getZip",
 										        cache: false,
 										        data:'city_id='+city_id+'&state_id='+state_id,
 										        dataType: "json",

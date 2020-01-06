@@ -1,5 +1,5 @@
-	<?php $this->load->view('admin/admin_header');?>
-		<?php $this->load->view('admin/admin_sidebar');?>
+	<?php $this->load->view('admin/admin_header'); ?>
+		<?php $this->load->view('admin/admin_sidebar'); ?>
 				<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -107,8 +107,8 @@
 
 												<tbody>
 												<?php if ($com_property) {
-	foreach ($com_property as $com) {
-		?>
+    foreach ($com_property as $com) {
+        ?>
 													<tr>
 														<!-- <td class="center">
 															<label>
@@ -119,8 +119,8 @@
 
 														<td>
 
-															<a href="#"><img style="width:200px; height:150 px;" src="<?php echo base_url(); ?>uploads/<?php $pic_arr = explode(",", $com['filename']);
-		echo $pic_arr[0];?>" alt=""/></a>
+															<a href="#"><img style="width:200px; height:150 px;" src="<?php echo base_url(); ?>uploads/<?php $pic_arr = explode(',', $com['filename']);
+        echo $pic_arr[0]; ?>" alt=""/></a>
 														</td>
 														<td><?php echo $com['title']; ?></td>
 														<td class="hidden-480"><?php echo $com['description']; ?></td>
@@ -136,16 +136,15 @@
 																	<i class="icon-zoom-in bigger-130"></i>
 																</a> -->
 																<?php
-if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('id') == 1) {?>
-																<a class="green" href="<?php echo base_url(); ?>admin/propertyComEdit?id=<?php echo $com['commId']; ?>&type=<?php echo $com['typeId']; ?>&forSale=<?php echo $com['forSale'] ?>">
+if ($com['uId'] == $this->session->userdata('id') || 1 == $this->session->userdata('id')) {?>
+																<a class="green" href="<?php echo base_url(); ?>admin/propertyComEdit?id=<?php echo $com['commId']; ?>&type=<?php echo $com['typeId']; ?>&forSale=<?php echo $com['forSale']; ?>">
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
 
-																<a class="red" href="<?php echo base_url(); ?>admin/propertyComDel?id=<?php echo $com['commId']; ?>&forSale=<?php echo $com['forSale'] ?>">
+																<a class="red" href="<?php echo base_url(); ?>admin/propertyComDel?id=<?php echo $com['commId']; ?>&forSale=<?php echo $com['forSale']; ?>">
 																	<i class="icon-trash bigger-130"></i>
 																</a>
-																<?php }
-		?>
+																<?php } ?>
 															</div>
 
 															<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -163,9 +162,9 @@ if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 																			</a>
 																		</li> -->
 			<?php
-if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('id') == 1) {?>
+if ($com['uId'] == $this->session->userdata('id') || 1 == $this->session->userdata('id')) {?>
 																		<li>
-																			<a href="<?php echo base_url(); ?>admin/propertyComEdit?id=<?php echo $com['commId']; ?>&type=<?php echo $com['typeId']; ?>&forSale=<?php echo $com['forSale'] ?>" class="tooltip-success" data-rel="tooltip" title="Edit">
+																			<a href="<?php echo base_url(); ?>admin/propertyComEdit?id=<?php echo $com['commId']; ?>&type=<?php echo $com['typeId']; ?>&forSale=<?php echo $com['forSale']; ?>" class="tooltip-success" data-rel="tooltip" title="Edit">
 																				<span class="green">
 																					<i class="icon-edit bigger-120"></i>
 																				</span>
@@ -173,20 +172,21 @@ if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 																		</li>
 
 																		<li>
-																			<a href="<?php echo base_url(); ?>admin/propertyComDel?id=<?php echo $com['commId']; ?>&forSale=<?php echo $com['forSale'] ?>" class="tooltip-error" data-rel="tooltip" title="Delete">
+																			<a href="<?php echo base_url(); ?>admin/propertyComDel?id=<?php echo $com['commId']; ?>&forSale=<?php echo $com['forSale']; ?>" class="tooltip-error" data-rel="tooltip" title="Delete">
 																				<span class="red">
 																					<i class="icon-trash bigger-120"></i>
 																				</span>
 																			</a>
 																		</li>
-																		<?php }
-		?>
+																		<?php } ?>
 																	</ul>
 																</div>
 															</div>
 														</td>
 													</tr>
-													<?php }}
+													<?php
+    }
+}
 ?>
 
 												</tbody>
@@ -222,8 +222,8 @@ if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 
 												<tbody>
 												<?php if ($res_property) {
-	foreach ($res_property as $res) {
-		?>
+    foreach ($res_property as $res) {
+        ?>
 													<tr>
 														<!-- <td class="center">
 															<label>
@@ -233,8 +233,8 @@ if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 														</td> -->
 
 														<td>
-															<a href="#"><img style="width:200px; height:150 px;" src="<?php echo base_url(); ?>uploads/<?php $pic_arry = explode(",", $res['filename']);
-		echo $pic_arry[0]?>" alt=""/></a>
+															<a href="#"><img style="width:200px; height:150 px;" src="<?php echo base_url(); ?>uploads/<?php $pic_arry = explode(',', $res['filename']);
+        echo $pic_arry[0]; ?>" alt=""/></a>
 														</td>
 														<td><?php echo $res['title']; ?></td>
 														<td class="hidden-480"><?php echo $res['description']; ?></td>
@@ -250,16 +250,15 @@ if ($com['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 																	<i class="icon-zoom-in bigger-130"></i>
 																</a> -->
 																<?php
-if ($res['uId'] == $this->session->userdata('id') || $this->session->userdata('id') == 1) {?>
-																<a class="green" href="<?php echo base_url(); ?>admin/propertyEdit?id=<?php echo $res['resId']; ?>&type=<?php echo $res['typeId']; ?>&forSale=<?php echo $res['forSale'] ?>">
+if ($res['uId'] == $this->session->userdata('id') || 1 == $this->session->userdata('id')) {?>
+																<a class="green" href="<?php echo base_url(); ?>admin/propertyEdit?id=<?php echo $res['resId']; ?>&type=<?php echo $res['typeId']; ?>&forSale=<?php echo $res['forSale']; ?>">
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
 
-																<a class="red" href="<?php echo base_url(); ?>admin/propertyResDel?id=<?php echo $res['resId']; ?>&forSale=<?php echo $res['forSale'] ?>">
+																<a class="red" href="<?php echo base_url(); ?>admin/propertyResDel?id=<?php echo $res['resId']; ?>&forSale=<?php echo $res['forSale']; ?>">
 																	<i class="icon-trash bigger-130"></i>
 																</a>
-																<?php }
-		?>
+																<?php } ?>
 															</div>
 
 															<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -277,9 +276,9 @@ if ($res['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 																			</a>
 																		</li> -->
 																	<?php
-if ($res['uId'] == $this->session->userdata('id') || $this->session->userdata('id') == 1) {?>
+if ($res['uId'] == $this->session->userdata('id') || 1 == $this->session->userdata('id')) {?>
 																		<li>
-																			<a href="<?php echo base_url(); ?>admin/propertyEdit?id=<?php echo $res['resId']; ?>&type=<?php echo $res['typeId']; ?>&forSale=<?php echo $res['forSale'] ?>" class="tooltip-success" data-rel="tooltip" title="Edit">
+																			<a href="<?php echo base_url(); ?>admin/propertyEdit?id=<?php echo $res['resId']; ?>&type=<?php echo $res['typeId']; ?>&forSale=<?php echo $res['forSale']; ?>" class="tooltip-success" data-rel="tooltip" title="Edit">
 																				<span class="green">
 																					<i class="icon-edit bigger-120"></i>
 																				</span>
@@ -287,20 +286,21 @@ if ($res['uId'] == $this->session->userdata('id') || $this->session->userdata('i
 																		</li>
 
 																		<li>
-																			<a href="<?php echo base_url(); ?>admin/propertyResDel?id=<?php echo $res['resId']; ?>&forSale=<?php echo $res['forSale'] ?>" class="tooltip-error" data-rel="tooltip" title="Delete">
+																			<a href="<?php echo base_url(); ?>admin/propertyResDel?id=<?php echo $res['resId']; ?>&forSale=<?php echo $res['forSale']; ?>" class="tooltip-error" data-rel="tooltip" title="Delete">
 																				<span class="red">
 																					<i class="icon-trash bigger-120"></i>
 																				</span>
 																			</a>
 																		</li>
-																		<?php }
-		?>
+																		<?php } ?>
 																	</ul>
 																</div>
 															</div>
 														</td>
 													</tr>
-													<?php }}
+													<?php
+    }
+}
 ?>
 
 												</tbody>

@@ -17,7 +17,7 @@
 */ ?>
 <div class="inside-banner">
   <div class="container">
-    <span class="pull-right"><a href="<?php echo base_url();?>">Home</a> / Newsletter</span>
+    <span class="pull-right"><a href="<?php echo base_url(); ?>">Home</a> / Newsletter</span>
     <h2>Register</h2>
 </div>
 </div>
@@ -34,7 +34,7 @@
                 <br />
            <div class="col-lg-3 col-lg-offset-1 col-sm-6 ">
            <?php if ($key_res) {?>
-           <input  type="hidden" id="unsubkey" value="<?php echo $key_res['key'];?>"?>
+           <input  type="hidden" id="unsubkey" value="<?php echo $key_res['key']; ?>"?>
            <?php }
 ?>
       <button type="button" id="btnunsub" class="btn btn-info">Yes</button>
